@@ -1,0 +1,4 @@
+Contact: mailto:waseem@automancer.uk
+Expires: 2027-11-21T05:35:38.655Z
+Preferred-Languages: en
+Canonical: https://automancer.uk/security.txt

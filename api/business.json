@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-11-21T05:35:38.655Z",
+  "legalName": "Automancer Ltd",
+  "tradingName": "Automancer",
+  "companyNumber": "17060907",
+  "placeOfRegistration": "England and Wales",
+  "icoRegistration": "ZC180569",
+  "url": "https://automancer.uk",
+  "email": "waseem@automancer.uk",
+  "phone": "+44 7451 261333",
+  "phoneTel": "+447451261333",
+  "address": {
+    "streetAddress": "62 Beckfield Road",
+    "addressLocality": "Bingley",
+    "postalCode": "BD16 1QS",
+    "addressCountry": "GB"
+  },
+  "areasServed": [
+    "Bradford",
+    "Leeds",
+    "Manchester",
+    "UK-wide (remote)"
+  ],
+  "description": "Practical AI and workflow automation for UK small businesses. Cut admin, reduce errors, and improve operations with Automancer."
+}

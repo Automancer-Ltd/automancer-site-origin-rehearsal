@@ -1,0 +1,57 @@
+# automancer.uk — we welcome crawlers, including AI agents.
+
+User-agent: *
+Allow: /
+
+# Major AI crawlers, explicitly allowed.
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: Diffbot
+Allow: /
+User-agent: Timpibot
+Allow: /
+
+# XML sitemap of every page
+Sitemap: https://automancer.uk/sitemap-index.xml
+
+# Machine-readable surfaces for agents:
+#   Developer docs ............... https://automancer.uk/developers
+#   Plain-text site guide ........ https://automancer.uk/llms.txt
+#   Full site text in one file ... https://automancer.uk/llms-full.txt
+#   Agent capability manifest .... https://automancer.uk/agent.json
+#     (canonical copy; also emitted at /.well-known/agent.json for hosts that serve dot-paths)
+#   API discovery document ....... https://automancer.uk/api/index.json
+#   OpenAPI 3.1 spec ............. https://automancer.uk/openapi.json
+#   Stability & deprecation ...... https://automancer.uk/api/stability.json
+#   Markdown twins ............... any page + ".md" (e.g. https://automancer.uk/about.md)
+#   Feeds ........................ /field-notes/rss.xml · /field-notes/feed.json · /work/rss.xml · /work/feed.json

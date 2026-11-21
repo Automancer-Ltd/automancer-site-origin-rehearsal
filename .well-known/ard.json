@@ -1,0 +1,31 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Automancer Ltd",
+    "documentationUrl": "https://automancer.uk/developers/"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:automancer.uk:api:public-data",
+      "displayName": "Automancer public data API",
+      "type": "application/vnd.oai.openapi+json",
+      "url": "https://automancer.uk/openapi.json",
+      "description": "Read-only, key-free JSON facts about Automancer Ltd: business details, services with published from-prices, case studies, field notes and every page.",
+      "capabilities": [
+        "business",
+        "services",
+        "case-studies",
+        "field-notes",
+        "pages",
+        "claims",
+        "stability"
+      ],
+      "representativeQueries": [
+        "what does Automancer charge for a workflow automation sprint",
+        "what services does Automancer Ltd offer",
+        "show Automancer case studies with their published results",
+        "how do I contact Automancer about automating admin work"
+      ]
+    }
+  ]
+}

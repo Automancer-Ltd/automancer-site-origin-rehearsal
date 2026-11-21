@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-11-21T05:35:38.655Z",
+  "count": 4,
+  "note": "All case studies are anonymised at launch until written client sign-off; every fact is taken from real delivered work.",
+  "caseStudies": [
+    {
+      "slug": "care-provider-transformation",
+      "title": "Automating a ~600-person care provider, one governed workstream at a time",
+      "headline": "Care without the clipboard.",
+      "description": "We are replacing spreadsheets and disconnected tools across a multi-branch supported-living provider with ~18 staged projects. The core system imported 294 carer records and 588 supervision schedules from messy CSVs.",
+      "url": "https://automancer.uk/work/care-provider-transformation/",
+      "markdownUrl": "https://automancer.uk/work/care-provider-transformation.md",
+      "datePublished": "2026-06-20T00:00:00.000Z",
+      "sector": "Social care / supported living",
+      "tags": [
+        "ERP",
+        "compliance",
+        "LMS",
+        "dashboards",
+        "custom software"
+      ],
+      "status": "Live production pilot",
+      "stats": [
+        {
+          "value": "294 + 293",
+          "label": "carers and service users imported as clean records from real CSVs"
+        },
+        {
+          "value": "588",
+          "label": "supervision and spot-check schedules created automatically"
+        },
+        {
+          "value": "274 / 418",
+          "label": "duplicate or ambiguous records matched automatically"
+        },
+        {
+          "value": "0 / 0",
+          "label": "failures and warnings across the production infrastructure audit"
+        }
+      ],
+      "body": "## A care business held together by spreadsheets and goodwill\n\nSupported-living care runs on paperwork: rosters, supervisions, medication records, training compliance, incident logs, mileage claims, and timesheets. This provider ran most of it by hand across three branches, using separate systems and spreadsheets that could not share data.\n\nThat creates gaps wherever a regulator looks. Inspection evidence sat in different tools. Refresher training was tracked in spreadsheets. Managers could only spot care-quality patterns when someone had a spare afternoon to compare exports. Around 500 support workers did not even have a company email address to sign in with.\n\nThey needed their daily systems connected in a sensible order, without disrupting care along the way.\n\n## Delivered in ~18 staged projects\n\nRather than risk one giant launch, we split the work into separate projects. Each one is scoped, tested against real exports, and signed off before it touches live client records.\n\n### The operations platform (ERP / CRM)\n\nWe built one system to replace a recruitment-only tool and dozens of spreadsheets. It holds one clean record for every carer and resident, tracks referrals from first call to onboarding, and manages incidents, purchase requests, and daily tasks. Every change is logged so managers can show an inspector who did what and when.\n\nResults from the live pilot:\n\n- One roster import created **294 carers and 293 service users** as clean records straight from the client's CSV files.\n- Identity matching **resolved 274 of 418** possible duplicates automatically, leaving only the genuinely unclear ones for staff to check.\n- **588 supervision and spot-check schedules** were created automatically.\n- Every report was checked against the client's existing exports — 500 visits, 175 medication alerts, and 416 names flagged for review — so managers could trust the figures from day one.\n\nThe platform is live in a production pilot that the client uses and reviews daily.\n\n### Self-hosted training and compliance system\n\nWe replaced outsourced training and spreadsheet tracking with a training system the provider runs itself. A custom compliance view tracks mandatory, refresher, and overdue training across all three branches. Instead of gathering CQC inspection evidence from several tools, managers can show an inspector one screen.\n\n### Management oversight dashboard\n\nThis dashboard is live. It brings care-quality alerts from separate systems into one view: branch comparisons, priority watchlists for support workers and residents, medication reviews, and an action queue. Managers see what needs attention in one place instead of checking three systems.\n\n### Monitored, EU-hosted infrastructure\n\nEverything runs on private EU-hosted servers with automated monitoring, encrypted backups, and a tested restore drill. The production audit passed with **zero failures and zero warnings across every layer.**\n\n### Support-worker login accounts\n\nRoughly 500 support workers had no consistent login, which blocked the training and staff portal rollout. We gave every worker a managed, EEA-hosted mailbox with automated setup tools so staff can sign in safely.\n\n**Also in build:** a staff portal (announcements, policies, HR resources, clock-in/out), a mobile mileage-claims app that checks routes and rates automatically, and digital leave requests. Alongside that, we delivered reviews of Microsoft 365 access, AI rota scheduling, phone call transcription, and staff WhatsApp announcements.\n\n## Checked against real data before go-live\n\nEvery project is built on a test system first, checked against the client's real exports, and signed off before it touches live resident data. The client tests each part and gives feedback before launch.\n\n## Live in production\n\n- The core operations platform is a **live production pilot** in daily use.\n- **294 carers and 293 service users** have one clean, auditable record instead of scattered spreadsheets.\n- **588 supervision schedules** are created and tracked automatically.\n- The management oversight dashboard is **live**, showing exceptions across branches in one place.\n- Production servers passed their security and backup audit with **zero failures and zero warnings.**"
+    },
+    {
+      "slug": "debiaser-ai-product",
+      "title": "A £300–400 consultant job, done for £10–80 in minutes",
+      "headline": "We turned a billable bottleneck into a product.",
+      "description": "For a diversity & inclusion consultancy, we turned a manual document-review service into a live self-service AI product. Same review standard, £10–80 per document, in production since June 2026.",
+      "url": "https://automancer.uk/work/debiaser-ai-product/",
+      "markdownUrl": "https://automancer.uk/work/debiaser-ai-product.md",
+      "datePublished": "2026-06-12T00:00:00.000Z",
+      "sector": "Professional services / DEI consulting",
+      "tags": [
+        "AI product",
+        "productisation",
+        "self-service",
+        "SaaS"
+      ],
+      "status": "Live in production",
+      "stats": [
+        {
+          "value": "£300–400 → £10–80",
+          "label": "per engagement, before → per document, after"
+        },
+        {
+          "value": "Hours → minutes",
+          "label": "turnaround, human review to self-service"
+        },
+        {
+          "value": "£100–200/hr",
+          "label": "consultant review, replaced by self-service"
+        },
+        {
+          "value": "12 Jun 2026",
+          "label": "live in production since"
+        }
+      ],
+      "body": "## Great expertise, limited by consultant hours\n\nThis consultancy spots bias in workplace documents — job descriptions, policies, and performance guides — and rewrites them so they read fairly. Previously, every review needed a consultant at £100–200 an hour reading a document line by line. That cost the client £300–400 per review and took several hours of a working day.\n\nThat limited how many reviews the firm could sell. A consultant cannot review a hundred documents at once, and smaller businesses could not afford the fee.\n\n## Debiaser.ai: the review process in software\n\nWe built a self-service web app that runs the consultancy's review process automatically. A customer uploads their documents and sees a clear price quote before any AI runs. The app then checks the text and returns two things:\n\n1. A marked-up report showing each finding, its severity, and the exact wording that triggered it.\n2. A revised version of the document in its original format (Word, Excel, PowerPoint, or PDF).\n\nThe app handles team credit pools, buyer approvals, card payments with automatic VAT calculation, and automatic deletion of uploaded documents after seven days.\n\n## What changed for the business\n\nA review that took **hours of consultant time at £100–200 an hour — roughly £300–400 per engagement** — now costs the customer **£10–80 and finishes in minutes.**\n\nPreviously, the consultancy could only review a few documents a day for large clients. Now any client can check as many documents as they need, at any hour, using the same review standards.\n\n## Clear pricing and built-in privacy\n\nCustomers see the exact cost before they run a review. Uploaded documents are deleted automatically after seven days, and the service runs on EU servers.\n\nThe product has been live in production since 12 June 2026, with ongoing monitoring and updates.\n\n## Results\n\n- **Live in production since 12 June 2026.**\n- Consultant reviews at **£300–400 per engagement** replaced by self-service at **£10–80 per document.**\n- Turnaround cut from **hours to minutes.**\n- Opened the service to smaller clients who could not pay consultant day rates."
+    },
+    {
+      "slug": "manufacturer-trade-portal",
+      "title": "Order-to-dispatch for a UK plastics manufacturer",
+      "headline": "From phone-and-memory to one clean flow.",
+      "description": "We replaced phone-and-memory order taking with a trade portal covering customer pricing, catalogue, orders, production, and dispatch in one flow. Phase 1 signed off.",
+      "url": "https://automancer.uk/work/manufacturer-trade-portal/",
+      "markdownUrl": "https://automancer.uk/work/manufacturer-trade-portal.md",
+      "datePublished": "2026-04-15T00:00:00.000Z",
+      "sector": "Manufacturing / building-products trade supply",
+      "tags": [
+        "custom software",
+        "trade portal",
+        "B2B",
+        "pricing engine"
+      ],
+      "status": "Phase 1 signed off",
+      "stats": [
+        {
+          "value": "One workflow",
+          "label": "order → production → dispatch → invoice-draft"
+        },
+        {
+          "value": "Computed",
+          "label": "per-customer pricing, calculated automatically"
+        },
+        {
+          "value": "Apr 2026",
+          "label": "Phase 1 signed off as a usable foundation"
+        },
+        {
+          "value": "5 units",
+          "label": "multi-unit pricing: feet, metres, sqft, sqm, each"
+        }
+      ],
+      "body": "## When customer prices live in someone's head\n\nMany manufacturers take trade orders by phone and email. One staff member remembers each customer's agreed prices, writes up the order, and passes notes to the factory floor. That works until that person is off sick, order volume grows, or a misquoted price wipes out the margin.\n\nThis manufacturer needed a reliable ordering system that kept each trade customer's individual pricing intact.\n\n## A trade portal and refreshed public website\n\nWe built a trade portal covering the full order journey, alongside a redesigned public website:\n\n- **For trade customers:** passwordless email sign-in, their own agreed prices across the catalogue, new order placement, and two-click repeat ordering.\n- **For staff:** one workspace to manage customers, products, price rules, incoming orders, production jobs, dispatches, and draft invoices.\n\nAt the centre is a pricing calculator that handles five units of measure — feet, metres, square feet, square metres, and individual items — plus bulk price updates and Irish cross-border orders.\n\nWe loaded the system from the client's existing price-list spreadsheet: 74 customers, 888 products, and 1,263 price rules ready on day one.\n\n## Delivered in stages\n\nWe delivered Phase 1 as a working order-to-dispatch system in a secure review environment, signed off by the client in April 2026. Accounting integration and automated invoicing follow in Phase 2 once the core ordering flow is settled.\n\n## Results\n\n- **Phase 1 signed off** in April 2026.\n- Order, production, dispatch, and draft invoicing run in **one workflow**.\n- Customer-specific prices are **calculated automatically** across five units of measure.\n- Loaded with 74 customers, 888 products, and 1,263 price rules from the client's real records."
+    },
+    {
+      "slug": "fast-small-business-websites",
+      "title": "From zero to live, in days, for near-zero running cost",
+      "headline": "A proper web presence, live in days, with no monthly fees.",
+      "description": "Fast, affordable landing sites for small businesses that need a credible website quickly, with no monthly platform fees.",
+      "url": "https://automancer.uk/work/fast-small-business-websites/",
+      "markdownUrl": "https://automancer.uk/work/fast-small-business-websites.md",
+      "datePublished": "2026-03-10T00:00:00.000Z",
+      "sector": "Small business / web",
+      "tags": [
+        "websites",
+        "landing pages",
+        "small business"
+      ],
+      "status": "Live",
+      "stats": [
+        {
+          "value": "Live in days",
+          "label": "from first brief to launch"
+        },
+        {
+          "value": "Near-zero",
+          "label": "running cost, with no monthly platform fees"
+        },
+        {
+          "value": "Thorough",
+          "label": "UK company and regulatory disclosures included"
+        },
+        {
+          "value": "Findable",
+          "label": "search engine setup and structured data in place"
+        }
+      ],
+      "body": "## Getting online without agency prices or monthly fees\n\nA new business needs a credible website people can find. Traditional web agencies quote thousands of pounds and take months, while website builders charge a monthly subscription forever. Small businesses often just need a fast, well-built site they own outright.\n\n## Two businesses launched from scratch\n\n**A new UK travel agency.** We took the client from having no website to a live site with service pages, a tested enquiry form, WhatsApp and phone links, and UK company disclosures. We also set up their domain, DNS, secure hosting, and email forwarding so they could take enquiries from day one.\n\n**A local credit-hire firm.** We built a fast single-page site with search engine metadata, structured business data, a sitemap, and regulatory footer disclosures in place from launch.\n\nBoth sites run on static hosting with no monthly platform fees.\n\n## Built with the same care as our larger systems\n\nEach site is hand-built rather than loaded with slow template plugins. We include the legal and regulatory footer disclosures new businesses often miss, plus the search engine basics that help local customers find them.\n\n## Results\n\n- Both businesses went from **no website to live in days.**\n- **No monthly platform fees.**\n- UK company disclosures and search engine fundamentals included from day one."
+    }
+  ]
+}

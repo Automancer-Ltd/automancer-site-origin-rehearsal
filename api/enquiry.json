@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-11-21T05:35:38.655Z",
+  "url": "https://automancer.uk/api/enquiry.json",
+  "page": "https://automancer.uk/contact/",
+  "summary": "How to send Automancer an enquiry. Every route reaches the same person, Waseem. Email is the one an agent can complete on its own; the web form needs a person in a browser.",
+  "preferredRouteForAgents": "email",
+  "routes": [
+    {
+      "id": "email",
+      "channel": "email",
+      "address": "waseem@automancer.uk",
+      "url": "mailto:waseem@automancer.uk",
+      "agentCanComplete": true,
+      "detail": "A plain email reaches the same human the form does. Waseem replies by email to the address it came from."
+    },
+    {
+      "id": "web-form",
+      "channel": "web-form",
+      "url": "https://automancer.uk/contact/",
+      "agentCanComplete": false,
+      "requires": [
+        "JavaScript",
+        "A Cloudflare Turnstile browser security check"
+      ],
+      "detail": "Built for a person in a browser. The intake service refuses a submission without a passed security check, and only accepts one sent from the form on automancer.uk. An agent cannot complete it and should not try to get round the check: use email."
+    },
+    {
+      "id": "phone",
+      "channel": "phone",
+      "number": "+44 7451 261333",
+      "url": "tel:+447451261333",
+      "agentCanComplete": false,
+      "requires": [
+        "A voice call"
+      ],
+      "detail": "A voicemail line: leave a message and it reaches Waseem, same as the form. No switchboard, no bot."
+    }
+  ],
+  "fields": [
+    {
+      "id": "name",
+      "label": "Your name",
+      "required": true,
+      "maxLength": 200,
+      "kind": "text"
+    },
+    {
+      "id": "company",
+      "label": "Business name",
+      "required": false,
+      "maxLength": 200,
+      "kind": "text"
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "required": true,
+      "maxLength": 254,
+      "kind": "email"
+    },
+    {
+      "id": "service",
+      "label": "What are you interested in?",
+      "required": false,
+      "maxLength": 30,
+      "kind": "choice",
+      "options": [
+        {
+          "value": "automation-opportunity-audit",
+          "label": "Automation Opportunity Audit",
+          "price": "from £450"
+        },
+        {
+          "value": "workflow-implementation-sprint",
+          "label": "Workflow Sprint",
+          "price": "from £1,950"
+        },
+        {
+          "value": "system-agent-build",
+          "label": "System / Agent Build",
+          "price": "from £4,500"
+        },
+        {
+          "value": "ai-ops-partner",
+          "label": "AI Ops Partner",
+          "price": "from £495/mo"
+        },
+        {
+          "value": "not-sure",
+          "label": "Not sure yet"
+        }
+      ]
+    },
+    {
+      "id": "time_sink",
+      "label": "What's eating your week?",
+      "required": true,
+      "maxLength": 5000,
+      "kind": "long-text",
+      "example": "The boring, repetitive, expensive stuff. What takes up too much of your team's time?"
+    },
+    {
+      "id": "team_size",
+      "label": "Roughly how big is your team?",
+      "required": false,
+      "maxLength": 80,
+      "kind": "text",
+      "example": "e.g. just me, 12, ~500"
+    },
+    {
+      "id": "extra",
+      "label": "Anything else we should know?",
+      "required": false,
+      "maxLength": 2000,
+      "kind": "long-text"
+    }
+  ],
+  "prefill": {
+    "parameter": "service",
+    "field": "service",
+    "values": [
+      "automation-opportunity-audit",
+      "workflow-implementation-sprint",
+      "system-agent-build",
+      "ai-ops-partner",
+      "not-sure"
+    ],
+    "example": "https://automancer.uk/contact/?service=automation-opportunity-audit",
+    "detail": "Opening /contact/ with ?service=<value> arrives with that option picked; the visitor can change it. Each service button on the site links this way. An unknown value picks nothing."
+  },
+  "combinedMessage": {
+    "fields": [
+      "service",
+      "time_sink",
+      "team_size",
+      "extra"
+    ],
+    "maxLength": 5000,
+    "detail": "The form sends these four as one message: “Interested in: …” with the chosen option's label when one is picked, then the answer to “What's eating your week?”, then “Team size: …” and “Also: …” when they are given. Together they must fit in 5,000 characters."
+  },
+  "email": {
+    "to": "waseem@automancer.uk",
+    "subject": "Enquiry",
+    "body": "Your name\n\nBusiness name (optional)\n\nWhat are you interested in? (optional) One of: Automation Opportunity Audit, Workflow Sprint, System / Agent Build, AI Ops Partner, Not sure yet.\n\nWhat's eating your week?\n\nRoughly how big is your team? (optional)\n\nAnything else we should know? (optional)\n",
+    "mailto": "mailto:waseem@automancer.uk?subject=Enquiry&body=Your%20name%0A%0ABusiness%20name%20(optional)%0A%0AWhat%20are%20you%20interested%20in%3F%20(optional)%20One%20of%3A%20Automation%20Opportunity%20Audit%2C%20Workflow%20Sprint%2C%20System%20%2F%20Agent%20Build%2C%20AI%20Ops%20Partner%2C%20Not%20sure%20yet.%0A%0AWhat's%20eating%20your%20week%3F%0A%0ARoughly%20how%20big%20is%20your%20team%3F%20(optional)%0A%0AAnything%20else%20we%20should%20know%3F%20(optional)%0A",
+    "detail": "A starting point that asks what the form asks. The form needs a name and what's eating your week; the rest is optional. The reply goes to the address the email is sent from."
+  },
+  "responsePromise": "We promise a meeting within one week of first contact.",
+  "whatHappensNext": [
+    {
+      "step": "Your message enters our pipeline",
+      "detail": "It lands in the same project system our AI agents run — the one we built and use every day. Nothing gets lost, nothing sits ignored in an inbox."
+    },
+    {
+      "step": "Waseem reads it. Personally.",
+      "detail": "No auto-responder pretending to be a person. An actual human reads what you wrote and works out how we can help."
+    },
+    {
+      "step": "You get a personal email back",
+      "detail": "From Waseem, to arrange a proper conversation — and we'll have that meeting within one week of you getting in touch."
+    },
+    {
+      "step": "We take it from there",
+      "detail": "Usually that means an Automation Audit, but if a quick pointer is all you need, we'll happily give you that too."
+    }
+  ],
+  "privacy": "https://automancer.uk/privacy/"
+}

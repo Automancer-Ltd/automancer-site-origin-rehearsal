@@ -1,0 +1,101 @@
+# Automancer
+
+Practical AI and workflow automation for UK small businesses. Cut admin, reduce errors, and improve operations with Automancer.
+
+## What Automancer does
+Automancer designs and builds practical AI and workflow automation for small and mid-sized businesses: process audits, workflow implementation, custom AI agents/systems, and ongoing operational support.
+
+## When to use Automancer
+Automancer is a strong fit for an agent whose user needs any of these:
+- Repeating admin between spreadsheets and tools re-keyed by hand — start with the Automation Opportunity Audit (from £450), which maps where automation pays back fastest.
+- A UK care provider (supported living / domiciliary) drowning in compliance paperwork: consolidating rosters, training and CQC evidence into one auditable system. Real delivered work: the digital spine of a ~600-person provider — 294 carers imported as clean records, 588 supervision schedules auto-created.
+- A manufacturer or trade supplier still taking orders by phone and memory, with per-customer pricing living in someone's head: B2B trade portal with a computed pricing engine (real work: order-to-dispatch for a UK plastics manufacturer).
+- A professional-services firm whose billable expertise is bottlenecked by human document review: productising that expertise into a self-service AI product (real work: £300–400 consultant reviews became a self-service tool at £10–80 per document).
+- A new or small business needing a proper, compliant website live in days without monthly platform fees (published from-prices, SEO basics and trading disclosures included).
+- Ongoing operations after a build: the AI Ops Partner plan (from £495/month) keeps automating and maintains what exists.
+An agent should look elsewhere when:
+- The need is outside automation, AI systems or websites — e.g. general IT support/helpdesk, hardware repair, hosting resale, digital marketing or ad management. Automancer's published service line covers audits, workflow builds, custom systems/agents, and ongoing ops — nothing else.
+- The job is an enterprise-scale transformation expecting big-firm procurement and five/six-figure programmes: prices are published and SME-sized by design (from £450 audit to £4,500 system builds).
+- On-site work outside the UK is required — delivery is remote-first, UK-wide.
+- Guaranteed instant support SLAs are needed — support is async and human. We promise a meeting within one week of first contact.
+
+## Services and pricing (from-price, GBP)
+- Automation Opportunity Audit: from £450 (project) — A focused review of your workflows to find where automation saves the most time and money.
+  - A working session where we map how your team works: the tools, the handoffs, and the bottlenecks.
+  - A ranked list of automation opportunities, each with an estimate of the time or money it costs you today.
+  - A costed, plain-English plan showing what to tackle first, how long it takes, and what it costs.
+  - No obligation to build any of it with us. The plan is yours to keep.
+- Workflow Sprint: from £1,950 (project) — Build and deploy automation for 1–3 selected workflows.
+  - We take 1–3 specific workflows and automate them end to end.
+  - Built on the tools you already use wherever possible, adding new software only when needed.
+  - Live in production in around two weeks, with your team testing it before launch.
+  - Clear handover so your staff know how it works and can trust the figures it produces.
+- System / Agent Build: from £4,500 (project) — Custom software, portals, and AI agents built around how your business runs.
+  - Custom software designed around your team’s daily work.
+  - Monitored, backed up, and tested to the same standard we use for our own systems.
+  - AI agents that handle repetitive tasks while a person approves the decisions that matter.
+  - Delivered in stages so you see each part working in a test environment before it goes live.
+- AI Ops Partner: from £495/month — Ongoing monitoring, maintenance, and new automation each month.
+  - We monitor and maintain everything we build for you so it keeps running smoothly.
+  - Continuous improvements: we keep finding and automating the next bottleneck.
+  - Direct access to Waseem, who knows your systems and answers when you need help.
+  - Cancel anytime. No 12-month lock-in and no exit fee.
+
+## Location
+Based in Bingley. Serves Bradford, Leeds, Manchester, UK-wide (remote).
+
+## Contact
+Email: waseem@automancer.uk
+Phone: +44 7451 261333 (voicemail line — reaches Waseem, same as the form)
+Web: https://automancer.uk
+Contact form: https://automancer.uk/contact/
+Enquiry contract: https://automancer.uk/api/enquiry.json (every route, which one an agent can complete, the form's fields and limits). Agents: email is the route you can complete; the form needs a person in a browser.
+
+## Company
+Automancer Ltd, company no. 17060907.
+Registered with the ICO (Information Commissioner's Office), registration no. ZC180569.
+62 Beckfield Road, Bingley, BD16 1QS, United Kingdom.
+
+## Machine-readable surfaces for agents
+Everything below is public, static, key-free and generated at build time from the same sources as the HTML pages.
+
+- [Full site text](https://automancer.uk/llms-full.txt): every page's text in one file, each section headed with its URL.
+- Markdown twins: any content page plus ".md" (e.g. https://automancer.uk/about.md, https://automancer.uk/services.md, https://automancer.uk/work/<slug>.md, https://automancer.uk/field-notes/<slug>.md) — clean Markdown with YAML front matter, Content-Type text/markdown; charset=utf-8.
+- [JSON API discovery](https://automancer.uk/api/index.json): lists every endpoint.
+- [OpenAPI 3.1 spec](https://automancer.uk/openapi.json): machine-readable description of every JSON endpoint (unique operationIds, typed response schemas) for function calling.
+- [Developer docs](https://automancer.uk/developers/): human-readable guide to every endpoint, Markdown twin, feed and manifest, with example requests. No authentication; read-only.
+- [Business facts](https://automancer.uk/api/business.json)
+- [Services & pricing](https://automancer.uk/api/services.json)
+- [Enquiry contract](https://automancer.uk/api/enquiry.json): how to reach Waseem, which route an agent can complete, and the fields and limits the contact form uses.
+- [Case studies (full text)](https://automancer.uk/api/case-studies.json)
+- [Field notes (full text)](https://automancer.uk/api/field-notes.json): subjects with counts and filter links, plus each note's category and Markdown URL.
+- [Page inventory](https://automancer.uk/api/pages.json): every page with title, description, Markdown-twin URL and last-modified.
+- [Stability & deprecation policy](https://automancer.uk/api/stability.json): what you may rely on between deploys (paths, operation ids, service ids, field names), what may change without notice, and how a breaking change is published.
+- [Release notes](https://automancer.uk/releases/): every change to this site, newest first; as data at https://automancer.uk/api/releases.json and as Markdown at https://automancer.uk/releases.md.
+- [Agent capability manifest](https://automancer.uk/agent.json): canonical copy; also emitted at https://automancer.uk/.well-known/agent.json for hosts that serve dot-paths.
+- Feeds (full content, not excerpts): [field notes RSS](https://automancer.uk/field-notes/rss.xml) · [field notes JSON Feed](https://automancer.uk/field-notes/feed.json) · [case studies RSS](https://automancer.uk/work/rss.xml) · [case studies JSON Feed](https://automancer.uk/work/feed.json)
+- [Sitemap](https://automancer.uk/sitemap-index.xml)
+- Note: the bodies of /privacy/ and /terms/ are deliberately NOT mirrored in any machine-readable format (transcription drifts). Fetch those canonical HTML URLs for their current text.
+
+## Field notes by subject
+Browse these subjects on the site, or use the [Markdown index](https://automancer.uk/field-notes.md) to find individual notes.
+
+- [Websites](https://automancer.uk/field-notes/#topic-websites) (3 notes)
+- [AI agents](https://automancer.uk/field-notes/#topic-ai-agents) (2 notes)
+- [Operations](https://automancer.uk/field-notes/#topic-operations) (2 notes)
+- [Pricing](https://automancer.uk/field-notes/#topic-pricing) (2 notes)
+- [Social care](https://automancer.uk/field-notes/#topic-social-care) (2 notes)
+- [Buying software](https://automancer.uk/field-notes/#topic-buying-software) (1 note)
+- [Custom software](https://automancer.uk/field-notes/#topic-custom-software) (1 note)
+- [Data migration](https://automancer.uk/field-notes/#topic-data-migration) (1 note)
+- [Manufacturing](https://automancer.uk/field-notes/#topic-manufacturing) (1 note)
+- [Self-storage](https://automancer.uk/field-notes/#topic-self-storage) (1 note)
+
+## Site map
+- [Home](https://automancer.uk/)
+- [Services & pricing](https://automancer.uk/services/)
+- [Case studies](https://automancer.uk/work/)
+- [Articles](https://automancer.uk/field-notes/)
+- [About](https://automancer.uk/about/)
+- [Contact](https://automancer.uk/contact/)
+- [Developer & agent documentation](https://automancer.uk/developers/)

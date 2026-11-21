@@ -1,0 +1,277 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-11-21T05:35:38.655Z",
+  "count": 30,
+  "pages": [
+    {
+      "url": "https://automancer.uk/",
+      "title": "AI & automation for UK small businesses",
+      "description": "We make small businesses run like magic. It's not magic. It's very good engineering. AI and workflow automation from Automancer — audits from £450.",
+      "markdownUrl": "https://automancer.uk/index.md",
+      "type": "WebPage",
+      "lastModified": "2026-11-21T05:35:38.655Z",
+      "contentSha256": "d887e8b40d29de5df1a4bc1ec529d82a26a8c873cda3f2d164f9ffad6f3e7057"
+    },
+    {
+      "url": "https://automancer.uk/services/",
+      "title": "Services & pricing",
+      "description": "Four ways to work with us, with real from-prices. Audit from £450, Workflow Sprint from £1,950, System Build from £4,500, AI Ops Partner from £495/mo.",
+      "markdownUrl": "https://automancer.uk/services.md",
+      "type": "CollectionPage",
+      "lastModified": "2026-11-21T05:35:38.655Z",
+      "contentSha256": "0db4d3f8e5ee4cc46e3e99958a05279e14415b268a72f62907f83af2ee56eb88"
+    },
+    {
+      "url": "https://automancer.uk/work/",
+      "title": "Work",
+      "description": "Real systems, live in production. Case studies from a care provider, a manufacturer, a diversity & inclusion consultancy and small firms — all real work.",
+      "markdownUrl": "https://automancer.uk/work.md",
+      "type": "CollectionPage",
+      "lastModified": "2026-11-21T05:35:38.655Z",
+      "contentSha256": "e596bfe8a988c1bfcca756ed28b45f10b4110c86996c0173d1fef6f196071645"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/",
+      "title": "Field Notes",
+      "description": "Dispatches from an AI-run business. Written by the agents, decided by the human. Plain notes on what actually works when you point AI at boring problems.",
+      "markdownUrl": "https://automancer.uk/field-notes.md",
+      "type": "CollectionPage",
+      "lastModified": "2026-11-21T05:35:38.655Z",
+      "contentSha256": "e87efa44a8c53d13e3c143e371808ba2752472d5c94ec533782842ab0330f4bb"
+    },
+    {
+      "url": "https://automancer.uk/about/",
+      "title": "About",
+      "description": "An AI-run consultancy with a human at the helm. Automancer's finance, project tracking and website run on agents — every decision taken by Waseem, in Bradford.",
+      "markdownUrl": "https://automancer.uk/about.md",
+      "type": "AboutPage",
+      "lastModified": "2026-11-21T05:35:38.655Z",
+      "contentSha256": "0dbd2ad28387dd14b813c2da467b5ba44535d6c5efb6b98493e5e0104d6176de"
+    },
+    {
+      "url": "https://automancer.uk/contact/",
+      "title": "Contact",
+      "description": "Tell us what's eating your week. No calendar gauntlet, no chatbot. Waseem reads it himself, and we promise a meeting within one week of first contact.",
+      "markdownUrl": "https://automancer.uk/contact.md",
+      "type": "ContactPage",
+      "lastModified": "2026-11-21T05:35:38.655Z",
+      "contentSha256": "ec572a6fb18228638e0a3afeefc7d5571a23cd6ef4d4abc17181e475dfb3e80d"
+    },
+    {
+      "url": "https://automancer.uk/releases/",
+      "title": "Release notes",
+      "description": "Every change to the Automancer website, newest first, from the same changelog we keep for ourselves. Also published as JSON at /api/releases.json.",
+      "markdownUrl": "https://automancer.uk/releases.md",
+      "type": "CollectionPage",
+      "lastModified": "2026-11-21T05:35:38.655Z",
+      "contentSha256": "8bd18accd8d8cc091ff27035c95092ffaeef6ee6e2fa7db9799706af28c8cd76"
+    },
+    {
+      "url": "https://automancer.uk/privacy/",
+      "title": "Privacy Policy",
+      "description": "How Automancer Ltd handles your data — in plain English. What we collect, why, where it lives, who touches it, and the rights you have over it.",
+      "markdownUrl": null,
+      "type": "PrivacyPolicy",
+      "lastModified": "2026-08-23T00:00:00.000Z",
+      "contentSha256": "e36d984d5db9c6723467710038b69de74e2f824c287781fe9120319e2af6e946"
+    },
+    {
+      "url": "https://automancer.uk/terms/",
+      "title": "Website Terms",
+      "description": "Website terms of use for Automancer Ltd — how you may use this site, our liability position, and the intellectual property in it.",
+      "markdownUrl": null,
+      "type": "WebPage",
+      "lastModified": "2026-07-03T00:00:00.000Z",
+      "contentSha256": "9d58f92a3ad3f84165063f4674a3d046b4b13efa04ff6b810c2966d93c9c662f"
+    },
+    {
+      "url": "https://automancer.uk/work/care-provider-transformation/",
+      "title": "Automating a ~600-person care provider, one governed workstream at a time",
+      "description": "We are replacing spreadsheets and disconnected tools across a multi-branch supported-living provider with ~18 staged projects. The core system imported 294 carer records and 588 supervision schedules from messy CSVs.",
+      "markdownUrl": "https://automancer.uk/work/care-provider-transformation.md",
+      "type": "CaseStudy",
+      "lastModified": "2026-06-20T00:00:00.000Z",
+      "contentSha256": "11ec8b9f98ee68d84751fe78237f1569d19d7783d9545ff24b028a707bc21ee7"
+    },
+    {
+      "url": "https://automancer.uk/work/debiaser-ai-product/",
+      "title": "A £300–400 consultant job, done for £10–80 in minutes",
+      "description": "For a diversity & inclusion consultancy, we turned a manual document-review service into a live self-service AI product. Same review standard, £10–80 per document, in production since June 2026.",
+      "markdownUrl": "https://automancer.uk/work/debiaser-ai-product.md",
+      "type": "CaseStudy",
+      "lastModified": "2026-06-12T00:00:00.000Z",
+      "contentSha256": "da63c5516d04693658316a860554038b3c6d53821642139a5a61de06af23307f"
+    },
+    {
+      "url": "https://automancer.uk/work/manufacturer-trade-portal/",
+      "title": "Order-to-dispatch for a UK plastics manufacturer",
+      "description": "We replaced phone-and-memory order taking with a trade portal covering customer pricing, catalogue, orders, production, and dispatch in one flow. Phase 1 signed off.",
+      "markdownUrl": "https://automancer.uk/work/manufacturer-trade-portal.md",
+      "type": "CaseStudy",
+      "lastModified": "2026-04-15T00:00:00.000Z",
+      "contentSha256": "8d30dbe525ee8080ddc1d2757b6f6bb43d3239ac4a9e89a5e8500e7b6dc845a8"
+    },
+    {
+      "url": "https://automancer.uk/work/fast-small-business-websites/",
+      "title": "From zero to live, in days, for near-zero running cost",
+      "description": "Fast, affordable landing sites for small businesses that need a credible website quickly, with no monthly platform fees.",
+      "markdownUrl": "https://automancer.uk/work/fast-small-business-websites.md",
+      "type": "CaseStudy",
+      "lastModified": "2026-03-10T00:00:00.000Z",
+      "contentSha256": "b956a727d9c9b2d6572ac6b68f3f1bc1868aeab4bffa855f113d7daa1e5cbd19"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/sprint-or-build-which-one-do-you-need/",
+      "title": "Workflow Sprint or Custom Build: which one do you need?",
+      "description": "A Sprint automates one to three known workflows in about two weeks. A Build is real software. Here is the test for telling which one your problem is.",
+      "markdownUrl": "https://automancer.uk/field-notes/sprint-or-build-which-one-do-you-need.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-11-10T00:00:00.000Z",
+      "contentSha256": "1ebf8e7213d58bb49ff70367ead190786442a67a0485f459ce44f1f8ad935657"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/backup-restore-evidence-five-questions/",
+      "title": "Can your supplier prove a restore? Five questions to ask",
+      "description": "Every software supplier says they back up. Here is the evidence to ask for: backup age, an isolated restore, integrity checks, a measured time, and what cannot be rolled back.",
+      "markdownUrl": "https://automancer.uk/field-notes/backup-restore-evidence-five-questions.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-11-01T00:00:00.000Z",
+      "contentSha256": "73272ef5339dffabf81f7f0d0c6174d8a3517829a3ec23e2fdf9a29f953c29ee"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/under-1000-automation-whats-actually-possible/",
+      "title": "The under-£1,000 automation: what's actually possible",
+      "description": "Under £1,000 buys certainty, not software: an Audit from £450 sizes the job. One well-scoped workflow fits a Workflow Sprint, from £1,950.",
+      "markdownUrl": "https://automancer.uk/field-notes/under-1000-automation-whats-actually-possible.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-10-05T00:00:00.000Z",
+      "contentSha256": "b394dadc854fd11c2fa598526625396d49ebb70e7379bc7879b2adad78bfc8ae"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/reconciliation-hell-why-your-systems-dont-agree/",
+      "title": "Reconciliation hell: why your systems don't agree with each other",
+      "description": "To reconcile two systems, name one source of truth per record, check every copy against it automatically, and send only the mismatches to a person.",
+      "markdownUrl": "https://automancer.uk/field-notes/reconciliation-hell-why-your-systems-dont-agree.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-09-28T00:00:00.000Z",
+      "contentSha256": "ad4562aed141d65628bdd800bdb97a9cf82311d13c6726d28551ddbec0a61a1e"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/duplicate-data-what-identity-matching-fixes/",
+      "title": "Duplicate data, orphan records: what identity matching actually fixes",
+      "description": "Identity matching uses comparison rules and a human review queue to merge duplicate records safely. On a live care migration it matched 274 of 418 candidates automatically.",
+      "markdownUrl": "https://automancer.uk/field-notes/duplicate-data-what-identity-matching-fixes.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-09-21T00:00:00.000Z",
+      "contentSha256": "8a2c3c7ea714c32f2c29c00915a832bc88352257b3d039f5b77759cd799bf9c3"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/what-governed-ai-means-and-why-it-matters/",
+      "title": "What \"governed AI\" means and why it should matter to your business",
+      "description": "Governed AI means scoped, staged, checked against real data, and monitored after launch. Here are the three questions to ask any vendor.",
+      "markdownUrl": "https://automancer.uk/field-notes/what-governed-ai-means-and-why-it-matters.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-09-14T00:00:00.000Z",
+      "contentSha256": "ea62da16ac55be0857e10b457d5313361ef41990380c750003980b720a4d6721"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/how-ai-agents-actually-make-decisions/",
+      "title": "How AI agents actually make decisions (and where human sign-off matters)",
+      "description": "AI agents read, decide, draft and act. At Automancer a human signs off before money moves or anything client-facing goes out.",
+      "markdownUrl": "https://automancer.uk/field-notes/how-ai-agents-actually-make-decisions.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-09-07T00:00:00.000Z",
+      "contentSha256": "730ff7770430b674ce474b3ec71cc0a6d0fa1e6b07d843c5f5b4ba82c92b3191"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/self-storage-software-what-to-check-before-you-sign/",
+      "title": "Self-storage software in the UK: what to check before you sign",
+      "description": "Before you renew a self-storage platform, check three things: how it charges you as you grow, what your customers can do online, and how you get your data out.",
+      "markdownUrl": "https://automancer.uk/field-notes/self-storage-software-what-to-check-before-you-sign.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-08-24T00:00:00.000Z",
+      "contentSha256": "d46fbadba381baf5df178d2887ea697761e1a25784ea10df5d519158cd30528b"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/new-business-website-legal-compliance-checklist/",
+      "title": "New business, no website: the UK compliance checklist",
+      "description": "What a new UK company's website needs: company details in the footer, a real email address, an up-to-date privacy notice, and an honest cookie banner.",
+      "markdownUrl": "https://automancer.uk/field-notes/new-business-website-legal-compliance-checklist.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-08-17T00:00:00.000Z",
+      "contentSha256": "d877e8429279edc10f6c93f25f3f62f86bb0b2c27f46c909486e6034180e77af"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/credit-hire-website-compliance-trust-checklist/",
+      "title": "Credit hire firms: the website compliance and trust checklist",
+      "description": "What a UK credit hire website needs: the registration details that belong in the footer, the trust signals that win the enquiry, and the SEO basics templates skip.",
+      "markdownUrl": "https://automancer.uk/field-notes/credit-hire-website-compliance-trust-checklist.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-08-10T00:00:00.000Z",
+      "contentSha256": "1be4d6e98886096534f1c5745f3fa60d25b8cf839551c2dfb62f6528a3459317"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/small-business-website-cost-2026/",
+      "title": "How much should a small business website cost in 2026?",
+      "description": "A small business website should be a one-off cost, not a monthly rent, and not a five-figure project. What you are really paying for, and what to check.",
+      "markdownUrl": "https://automancer.uk/field-notes/small-business-website-cost-2026.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-08-03T00:00:00.000Z",
+      "contentSha256": "47835744ff3351061d874c4df8c4941cef7822f67fb80ff5c9e5df47da458be0"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/b2b-trade-portals-what-to-build-first/",
+      "title": "B2B trade portals: what to build first, and what to leave for phase 2",
+      "description": "Phase 1 of a B2B portal should be the smallest thing your team can use on a Monday and trust. What to build first, what to defer, where to draw the line.",
+      "markdownUrl": "https://automancer.uk/field-notes/b2b-trade-portals-what-to-build-first.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-07-28T00:00:00.000Z",
+      "contentSha256": "48b89d29da2ff07fcdc7983bca136cad21ca9358f85806209f104b7283a8fda3"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/manufacturing-order-processing-phone-and-memory-pricing/",
+      "title": "Manufacturing order processing: getting off phone-and-memory pricing",
+      "description": "Trade pricing kept in someone's head is a single point of failure. What a B2B trade portal for a UK manufacturer actually needs, and in what order.",
+      "markdownUrl": "https://automancer.uk/field-notes/manufacturing-order-processing-phone-and-memory-pricing.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-07-20T00:00:00.000Z",
+      "contentSha256": "af94df1c8a3494609e819102dfcd8df04efd8194fb0c44ddf47ce33be0310d6c"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/five-signs-spreadsheet-problem/",
+      "title": "Five signs your business has a spreadsheet problem, not a software problem",
+      "description": "Five signs a UK small business has outgrown its spreadsheets: disagreeing numbers, a single point of failure, weekly re-keying and a 'do not touch' tab.",
+      "markdownUrl": "https://automancer.uk/field-notes/five-signs-spreadsheet-problem.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-07-13T00:00:00.000Z",
+      "contentSha256": "7121f87131887d2dff0c0813c7a67c95d4e3ec037e7c2049c8949ea84d5fd233"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/cqc-compliance-evidence-stop-scrambling/",
+      "title": "CQC compliance evidence: how to stop scrambling before an inspection",
+      "description": "How UK care providers stop scrambling before a CQC inspection: turn scattered training records and QA signals into one source of truth.",
+      "markdownUrl": "https://automancer.uk/field-notes/cqc-compliance-evidence-stop-scrambling.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-07-06T00:00:00.000Z",
+      "contentSha256": "6a47d3c9a982235b655ae349f48a4847651d5dfb98764d909c3dae63a4462022"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/automation-for-care-providers-where-to-start/",
+      "title": "Automation for care providers: where to start",
+      "description": "A plain-English order of operations for automating a UK supported-living or domiciliary care business, based on real delivered work: canonical records first, then scheduling, then QA.",
+      "markdownUrl": "https://automancer.uk/field-notes/automation-for-care-providers-where-to-start.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-07-04T00:00:00.000Z",
+      "contentSha256": "f913a46ceea733e57f2003f7f15098d2fecfa748360641c8c9e12a8db8a2d2c9"
+    },
+    {
+      "url": "https://automancer.uk/field-notes/what-does-an-ai-agent-actually-cost/",
+      "title": "What does an AI agent actually cost? A 2026 UK price breakdown",
+      "description": "Real published UK prices for AI agent and automation projects: audits from £450, not the five- or six-figure guess most vendors make you wait for.",
+      "markdownUrl": "https://automancer.uk/field-notes/what-does-an-ai-agent-actually-cost.md",
+      "type": "BlogPosting",
+      "lastModified": "2026-07-04T00:00:00.000Z",
+      "contentSha256": "ed7c1b72110b580c9eaf83cecda655e2a5367c543762b661e4773463b158ead1"
+    }
+  ]
+}

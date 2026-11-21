@@ -1,0 +1,1741 @@
+{
+  "openapi": "3.1.0",
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "info": {
+    "title": "Automancer public data API",
+    "version": "1.0.0",
+    "summary": "Read-only, key-free JSON facts about Automancer Ltd and its published work.",
+    "description": "Static JSON endpoints describing Automancer Ltd, a UK AI & workflow automation consultancy: business facts, services with published from-prices, case studies, field notes and a full page inventory.\n\nEverything here is PUBLIC DATA requiring no authentication, no API key and no payment. The API is strictly READ-ONLY: only GET exists; there are no write operations, user accounts or tracking. All responses are generated at build time and change only at deploy, so they cache well.\n\nHuman-readable documentation: https://automancer.uk/developers — start there, or at https://automancer.uk/api/index.json for machine discovery.\n\nVersioning and deprecation: this is version 1 of the API. A breaking change is published at a new versioned path (/api/v2/<name>.json) while the old path keeps its shape; a removal is announced in https://automancer.uk/api/stability.json `deprecations` at least 90 days before its sunset date. New fields and endpoints may be added at any deploy.",
+    "contact": {
+      "name": "Automancer",
+      "email": "waseem@automancer.uk",
+      "url": "https://automancer.uk/contact/"
+    },
+    "termsOfService": "https://automancer.uk/terms/"
+  },
+  "servers": [
+    {
+      "url": "https://automancer.uk",
+      "description": "Production static site (GitHub Pages)."
+    }
+  ],
+  "security": [],
+  "tags": [
+    {
+      "name": "public-data",
+      "description": "Public, static, unauthenticated facts about the business and its published content."
+    }
+  ],
+  "paths": {
+    "/api/index.json": {
+      "get": {
+        "operationId": "getApiIndex",
+        "summary": "API discovery document",
+        "description": "This discovery document: lists every JSON endpoint with a one-line description, plus related machine-readable surfaces (llms.txt, feeds, agent manifest, sitemap).",
+        "tags": [
+          "public-data"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "The current payload as static JSON, generated at build time. This site is read-only: only GET and HEAD exist; any other method answers 405 with the same problem body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiIndex"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No endpoint at this path: mistyped, or withdrawn after its sunset date (see /api/stability.json). Every live endpoint is listed at /api/index.json.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "The static host failed to answer. Retry after a short wait.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/business.json": {
+      "get": {
+        "operationId": "getBusinessFacts",
+        "summary": "Canonical business facts",
+        "description": "Canonical business facts: legal name, trading name, company registration, ICO registration, contact details, address and areas served.",
+        "tags": [
+          "public-data"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "The current payload as static JSON, generated at build time. This site is read-only: only GET and HEAD exist; any other method answers 405 with the same problem body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessFacts"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No endpoint at this path: mistyped, or withdrawn after its sunset date (see /api/stability.json). Every live endpoint is listed at /api/index.json.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "The static host failed to answer. Retry after a short wait.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/services.json": {
+      "get": {
+        "operationId": "getServices",
+        "summary": "Services and published from-prices",
+        "description": "Service offerings with published from-prices (GBP), billing units, stable ids, and the same included list the /services page shows. Who an offer is for, and the FAQ, stay on the page.",
+        "tags": [
+          "public-data"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "The current payload as static JSON, generated at build time. This site is read-only: only GET and HEAD exist; any other method answers 405 with the same problem body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServicesResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No endpoint at this path: mistyped, or withdrawn after its sunset date (see /api/stability.json). Every live endpoint is listed at /api/index.json.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "The static host failed to answer. Retry after a short wait.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/enquiry.json": {
+      "get": {
+        "operationId": "getEnquiryContract",
+        "summary": "How to send an enquiry, and which route an agent can complete",
+        "description": "The enquiry contract as data: every route to Waseem (email, the web form, phone), which of them an agent can complete on its own (email), what the web form needs, the fields it asks for with their limits, an email template that asks the same questions, the response promise and what happens next. The /contact page reads the same module.",
+        "tags": [
+          "public-data"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "The current payload as static JSON, generated at build time. This site is read-only: only GET and HEAD exist; any other method answers 405 with the same problem body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EnquiryContract"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No endpoint at this path: mistyped, or withdrawn after its sunset date (see /api/stability.json). Every live endpoint is listed at /api/index.json.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "The static host failed to answer. Retry after a short wait.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/case-studies.json": {
+      "get": {
+        "operationId": "getCaseStudies",
+        "summary": "All case studies with full text",
+        "description": "Every published case study: title, summary, sector, tags, publication date, headline stats and the full body text as raw Markdown.",
+        "tags": [
+          "public-data"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "The current payload as static JSON, generated at build time. This site is read-only: only GET and HEAD exist; any other method answers 405 with the same problem body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseStudiesResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No endpoint at this path: mistyped, or withdrawn after its sunset date (see /api/stability.json). Every live endpoint is listed at /api/index.json.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "The static host failed to answer. Retry after a short wait.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/claims.json": {
+      "get": {
+        "operationId": "getClaims",
+        "summary": "Published numeric claims and their evidence records",
+        "description": "Every numeric headline case-study statistic with its stable truth-layer claim id, registry location, evidence record and source quote.",
+        "tags": [
+          "public-data"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "The current payload as static JSON, generated at build time. This site is read-only: only GET and HEAD exist; any other method answers 405 with the same problem body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClaimsResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No endpoint at this path: mistyped, or withdrawn after its sunset date (see /api/stability.json). Every live endpoint is listed at /api/index.json.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "The static host failed to answer. Retry after a short wait.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/field-notes.json": {
+      "get": {
+        "operationId": "getFieldNotes",
+        "summary": "All field notes with full text",
+        "description": "Every published field note article: title, description, author, date, category, tags and the full body text as raw Markdown.",
+        "tags": [
+          "public-data"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "The current payload as static JSON, generated at build time. This site is read-only: only GET and HEAD exist; any other method answers 405 with the same problem body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FieldNotesResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No endpoint at this path: mistyped, or withdrawn after its sunset date (see /api/stability.json). Every live endpoint is listed at /api/index.json.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "The static host failed to answer. Retry after a short wait.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/pages.json": {
+      "get": {
+        "operationId": "getPageInventory",
+        "summary": "Inventory of every page on the site",
+        "description": "Every page emitted by this site: canonical URL, title, description, type, last-modified date and its Markdown twin URL where one exists.",
+        "tags": [
+          "public-data"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "The current payload as static JSON, generated at build time. This site is read-only: only GET and HEAD exist; any other method answers 405 with the same problem body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PageInventoryResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No endpoint at this path: mistyped, or withdrawn after its sunset date (see /api/stability.json). Every live endpoint is listed at /api/index.json.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "The static host failed to answer. Retry after a short wait.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stability.json": {
+      "get": {
+        "operationId": "getStabilityPolicy",
+        "summary": "What machines may rely on, and how a breaking change is published",
+        "description": "The stability and deprecation policy as data: the endpoint paths and service ids promised stable, the changes that may land without notice, the versioning scheme, the minimum notice a removal gets, and the deprecation list itself (empty today).",
+        "tags": [
+          "public-data"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "The current payload as static JSON, generated at build time. This site is read-only: only GET and HEAD exist; any other method answers 405 with the same problem body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StabilityPolicy"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No endpoint at this path: mistyped, or withdrawn after its sunset date (see /api/stability.json). Every live endpoint is listed at /api/index.json.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "The static host failed to answer. Retry after a short wait.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/releases.json": {
+      "get": {
+        "operationId": "getReleases",
+        "summary": "Every release of this site, newest first",
+        "description": "Every release of this site, newest first, read from the same changelog /releases renders: version, ISO date, opening summary, the full notes as raw Markdown and each release’s URL on /releases.",
+        "tags": [
+          "public-data"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "The current payload as static JSON, generated at build time. This site is read-only: only GET and HEAD exist; any other method answers 405 with the same problem body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReleasesResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No endpoint at this path: mistyped, or withdrawn after its sunset date (see /api/stability.json). Every live endpoint is listed at /api/index.json.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "The static host failed to answer. Retry after a short wait.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiIndex": {
+        "type": "object",
+        "description": "The /api/index.json discovery document.",
+        "additionalProperties": false,
+        "properties": {
+          "schemaVersion": {
+            "type": "string",
+            "description": "Semver-ish version of this payload shape."
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "generatedAt": {
+            "type": "string",
+            "description": "Build time — payloads change only at deploy.",
+            "format": "date-time"
+          },
+          "endpoints": {
+            "type": "array",
+            "description": "Every JSON endpoint on this site.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "description"
+              ]
+            }
+          },
+          "related": {
+            "type": "array",
+            "description": "Related machine-readable surfaces that are not under /api/ (docs page, OpenAPI spec, plain-text guides, feeds, manifests).",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "description"
+              ]
+            }
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "generatedAt",
+          "name",
+          "url",
+          "endpoints",
+          "related"
+        ]
+      },
+      "BusinessFacts": {
+        "type": "object",
+        "description": "The /api/business.json payload.",
+        "additionalProperties": false,
+        "properties": {
+          "schemaVersion": {
+            "type": "string"
+          },
+          "generatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "legalName": {
+            "type": "string",
+            "description": "Registered company name."
+          },
+          "tradingName": {
+            "type": "string",
+            "description": "Name the business trades under."
+          },
+          "companyNumber": {
+            "type": "string",
+            "description": "Companies House registration number."
+          },
+          "placeOfRegistration": {
+            "type": "string",
+            "description": "Jurisdiction of registration."
+          },
+          "icoRegistration": {
+            "type": "string",
+            "description": "Information Commissioner's Office data-protection registration."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "phone": {
+            "type": "string",
+            "description": "Human-formatted voicemail line; messages reach a person."
+          },
+          "phoneTel": {
+            "type": "string",
+            "description": "E.164 form for tel: links."
+          },
+          "address": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "streetAddress": {
+                "type": "string"
+              },
+              "addressLocality": {
+                "type": "string"
+              },
+              "postalCode": {
+                "type": "string"
+              },
+              "addressCountry": {
+                "type": "string",
+                "description": "ISO 3166-1 alpha-2 country code.",
+                "maxLength": 2
+              }
+            },
+            "required": [
+              "streetAddress",
+              "addressLocality",
+              "postalCode",
+              "addressCountry"
+            ]
+          },
+          "areasServed": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "One-paragraph description of the business."
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "generatedAt",
+          "legalName",
+          "tradingName",
+          "companyNumber",
+          "placeOfRegistration",
+          "icoRegistration",
+          "url",
+          "email",
+          "phone",
+          "phoneTel",
+          "address",
+          "areasServed",
+          "description"
+        ]
+      },
+      "ServicesResponse": {
+        "type": "object",
+        "description": "The /api/services.json payload.",
+        "additionalProperties": false,
+        "properties": {
+          "schemaVersion": {
+            "type": "string"
+          },
+          "generatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "currency": {
+            "type": "string",
+            "description": "ISO 4217 currency code all prices use.",
+            "enum": [
+              "GBP"
+            ]
+          },
+          "note": {
+            "type": "string",
+            "description": "Pricing caveat as published."
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Stable kebab-case id derived from the service name."
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "One-line description. Scope is `includes`, the same bullets the /services page shows."
+                },
+                "includes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "The \"What's included\" bullets the /services page shows for this service, in that order."
+                },
+                "priceFrom": {
+                  "type": "number",
+                  "description": "Published \"from\" price."
+                },
+                "priceCurrency": {
+                  "type": "string",
+                  "enum": [
+                    "GBP"
+                  ]
+                },
+                "priceUnit": {
+                  "type": "string",
+                  "description": "What the from-price buys one unit of.",
+                  "enum": [
+                    "project",
+                    "month"
+                  ]
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "description",
+                "includes",
+                "priceFrom",
+                "priceCurrency",
+                "priceUnit",
+                "url"
+              ]
+            }
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "generatedAt",
+          "currency",
+          "services"
+        ]
+      },
+      "CaseStudiesResponse": {
+        "type": "object",
+        "description": "The /api/case-studies.json payload.",
+        "additionalProperties": false,
+        "properties": {
+          "schemaVersion": {
+            "type": "string"
+          },
+          "generatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "note": {
+            "type": "string"
+          },
+          "caseStudies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "slug": {
+                  "type": "string",
+                  "description": "URL slug — the same id used by /work/<slug>."
+                },
+                "title": {
+                  "type": "string",
+                  "description": "The case study's name, as on its /work card and in its page <title>."
+                },
+                "headline": {
+                  "type": "string",
+                  "description": "The editorial heading shown as the case study page's h1."
+                },
+                "description": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "markdownUrl": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "datePublished": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "sector": {
+                  "type": "string"
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "status": {
+                  "type": "string",
+                  "description": "Delivery status as published (e.g. \"Live in production\")."
+                },
+                "stats": {
+                  "type": "array",
+                  "description": "Headline numbers quoted in the case study.",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string"
+                      },
+                      "label": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "label"
+                    ]
+                  }
+                },
+                "body": {
+                  "type": "string",
+                  "description": "Full body text as raw Markdown."
+                }
+              },
+              "required": [
+                "slug",
+                "title",
+                "description",
+                "url",
+                "markdownUrl",
+                "datePublished",
+                "sector",
+                "tags",
+                "stats",
+                "body"
+              ]
+            }
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "generatedAt",
+          "count",
+          "caseStudies"
+        ]
+      },
+      "ClaimsResponse": {
+        "type": "object",
+        "description": "The /api/claims.json payload.",
+        "additionalProperties": false,
+        "properties": {
+          "schemaVersion": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "claims": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Stable claim id in the Automancer BD truth-layer registry."
+                },
+                "value": {
+                  "type": "string"
+                },
+                "evidenceRecord": {
+                  "type": "string",
+                  "description": "Truth-layer evidence record path."
+                },
+                "registry": {
+                  "type": "string",
+                  "description": "Truth-layer claims registry path."
+                },
+                "sourceQuote": {
+                  "type": "string",
+                  "description": "Evidence quote recorded by the truth layer."
+                }
+              },
+              "required": [
+                "id",
+                "value",
+                "evidenceRecord",
+                "registry",
+                "sourceQuote"
+              ]
+            }
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "source",
+          "claims"
+        ]
+      },
+      "FieldNotesResponse": {
+        "type": "object",
+        "description": "The /api/field-notes.json payload.",
+        "additionalProperties": false,
+        "properties": {
+          "schemaVersion": {
+            "type": "string"
+          },
+          "generatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "topics": {
+            "type": "array",
+            "description": "Subjects available in the Field Notes index, most notes first. General notes appear in fieldNotes only.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Subject shown on the site. Matches fieldNotes[].category."
+                },
+                "slug": {
+                  "type": "string",
+                  "description": "URL slug of the subject filter."
+                },
+                "count": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "description": "Number of published notes on this subject."
+                },
+                "url": {
+                  "type": "string",
+                  "description": "Field Notes page with this subject selected in the browser.",
+                  "format": "uri"
+                },
+                "noteSlugs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Matching fieldNotes[].slug values, newest first."
+                }
+              },
+              "required": [
+                "label",
+                "slug",
+                "count",
+                "url",
+                "noteSlugs"
+              ]
+            }
+          },
+          "fieldNotes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "slug": {
+                  "type": "string",
+                  "description": "URL slug — the same id used by /field-notes/<slug>."
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "markdownUrl": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "datePublished": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "author": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string",
+                  "description": "Editorial category; falls back to sector when uncategorised."
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "body": {
+                  "type": "string",
+                  "description": "Full body text as raw Markdown."
+                }
+              },
+              "required": [
+                "slug",
+                "title",
+                "description",
+                "url",
+                "markdownUrl",
+                "datePublished",
+                "author",
+                "tags",
+                "body"
+              ]
+            }
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "generatedAt",
+          "count",
+          "topics",
+          "fieldNotes"
+        ]
+      },
+      "PageInventoryResponse": {
+        "type": "object",
+        "description": "The /api/pages.json payload.",
+        "additionalProperties": false,
+        "properties": {
+          "schemaVersion": {
+            "type": "string"
+          },
+          "generatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "markdownUrl": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "uri",
+                  "description": "Markdown twin URL, or null where none is published."
+                },
+                "type": {
+                  "type": "string",
+                  "description": "schema.org-flavoured page type (WebPage, CollectionPage, CaseStudy, …)."
+                },
+                "lastModified": {
+                  "type": "string",
+                  "description": "When the words on this page last changed on the live site. A deploy that changes no words keeps the date.",
+                  "format": "date-time"
+                },
+                "contentSha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$",
+                  "description": "SHA-256 (hex) of the page's title, description and visible main text. It changes exactly when lastModified moves, so an agent can tell whether a page it read before has changed."
+                }
+              },
+              "required": [
+                "url",
+                "title",
+                "description",
+                "markdownUrl",
+                "type",
+                "lastModified",
+                "contentSha256"
+              ]
+            }
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "generatedAt",
+          "count",
+          "pages"
+        ]
+      },
+      "StabilityPolicy": {
+        "type": "object",
+        "description": "The /api/stability.json payload.",
+        "additionalProperties": false,
+        "properties": {
+          "schemaVersion": {
+            "type": "string",
+            "description": "Semver-ish version of this payload shape."
+          },
+          "generatedAt": {
+            "type": "string",
+            "description": "Build time — payloads change only at deploy.",
+            "format": "date-time"
+          },
+          "effectiveFrom": {
+            "type": "string",
+            "description": "ISO date this policy took effect. A change here is a change of promise."
+          },
+          "url": {
+            "type": "string",
+            "description": "Where this document is served.",
+            "format": "uri"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "versioning": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scheme": {
+                "type": "string",
+                "enum": [
+                  "path-versioned"
+                ]
+              },
+              "currentVersion": {
+                "type": "integer"
+              },
+              "detail": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "scheme",
+              "currentVersion",
+              "detail"
+            ]
+          },
+          "stable": {
+            "type": "array",
+            "description": "What a machine may rely on between deploys. Changing one of these is breaking.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "what": {
+                  "type": "string"
+                },
+                "detail": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "what",
+                "detail"
+              ]
+            }
+          },
+          "endpointPaths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Every endpoint path the promise covers."
+          },
+          "stableServiceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Published service ids that never change."
+          },
+          "additiveChanges": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "What may land at any deploy without notice."
+          },
+          "deprecation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "minimumNoticeDays": {
+                "type": "integer"
+              },
+              "announcedIn": {
+                "type": "string"
+              },
+              "procedure": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "httpHeaders": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "minimumNoticeDays",
+              "announcedIn",
+              "procedure",
+              "httpHeaders"
+            ]
+          },
+          "deprecations": {
+            "type": "array",
+            "description": "Nothing published here is deprecated today; this is the list an agent polls.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "The path going away."
+                },
+                "field": {
+                  "type": "string",
+                  "description": "The narrower field, when the deprecation is smaller than a path."
+                },
+                "replacement": {
+                  "type": "string",
+                  "description": "What to use instead."
+                },
+                "deprecatedOn": {
+                  "type": "string",
+                  "description": "ISO date this entry was first published."
+                },
+                "sunset": {
+                  "type": "string",
+                  "description": "ISO date the old path or field stops being served."
+                }
+              },
+              "required": [
+                "path",
+                "replacement",
+                "deprecatedOn",
+                "sunset"
+              ]
+            }
+          },
+          "notPromised": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "What this site does not promise, stated rather than implied."
+          },
+          "contact": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "email": {
+                "type": "string",
+                "format": "email"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "note": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "email",
+              "url",
+              "note"
+            ]
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "generatedAt",
+          "effectiveFrom",
+          "url",
+          "summary",
+          "versioning",
+          "stable",
+          "endpointPaths",
+          "stableServiceIds",
+          "additiveChanges",
+          "deprecation",
+          "deprecations",
+          "notPromised",
+          "contact"
+        ]
+      },
+      "EnquiryContract": {
+        "type": "object",
+        "description": "The /api/enquiry.json payload.",
+        "additionalProperties": false,
+        "properties": {
+          "schemaVersion": {
+            "type": "string",
+            "description": "Semver-ish version of this payload shape."
+          },
+          "generatedAt": {
+            "type": "string",
+            "description": "Build time — payloads change only at deploy.",
+            "format": "date-time"
+          },
+          "url": {
+            "type": "string",
+            "description": "Where this document is served.",
+            "format": "uri"
+          },
+          "page": {
+            "type": "string",
+            "description": "The contact page a person uses.",
+            "format": "uri"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "preferredRouteForAgents": {
+            "type": "string",
+            "description": "The id of the route an agent should use.",
+            "enum": [
+              "email"
+            ]
+          },
+          "routes": {
+            "type": "array",
+            "description": "Every way to reach Waseem. Each reaches the same person.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "enum": [
+                    "email",
+                    "web-form",
+                    "phone"
+                  ]
+                },
+                "channel": {
+                  "type": "string",
+                  "enum": [
+                    "email",
+                    "web-form",
+                    "phone"
+                  ]
+                },
+                "address": {
+                  "type": "string",
+                  "format": "email"
+                },
+                "number": {
+                  "type": "string",
+                  "description": "The phone number, as a person dials it."
+                },
+                "url": {
+                  "type": "string",
+                  "description": "A mailto:, tel: or https: URL for this route."
+                },
+                "agentCanComplete": {
+                  "type": "boolean",
+                  "description": "True only where an agent can finish the enquiry without a person."
+                },
+                "requires": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "What the route needs that an agent may not have."
+                },
+                "detail": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "channel",
+                "url",
+                "agentCanComplete",
+                "detail"
+              ]
+            }
+          },
+          "fields": {
+            "type": "array",
+            "description": "What the /contact form asks for, in its order, with the same labels and limits.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "The form control name; stable."
+                },
+                "label": {
+                  "type": "string",
+                  "description": "The label a person reads on /contact."
+                },
+                "required": {
+                  "type": "boolean"
+                },
+                "maxLength": {
+                  "type": "integer",
+                  "description": "The most characters the form accepts in this field."
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "text",
+                    "email",
+                    "long-text",
+                    "choice"
+                  ]
+                },
+                "example": {
+                  "type": "string",
+                  "description": "The example the form shows in the empty field."
+                },
+                "options": {
+                  "type": "array",
+                  "description": "For a choice: its answers, in the order the form shows them.",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "description": "The submitted value; a published service id, or not-sure."
+                      },
+                      "label": {
+                        "type": "string",
+                        "description": "The name a person reads."
+                      },
+                      "price": {
+                        "type": "string",
+                        "description": "The published from-price shown beside it, for a service."
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "label"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "label",
+                "required",
+                "maxLength",
+                "kind"
+              ]
+            }
+          },
+          "prefill": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "parameter": {
+                "type": "string",
+                "description": "The /contact/ query parameter that picks an option on arrival."
+              },
+              "field": {
+                "type": "string",
+                "description": "The field it fills."
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "The values it accepts."
+              },
+              "example": {
+                "type": "string",
+                "description": "A /contact/ address with one option picked.",
+                "format": "uri"
+              },
+              "detail": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "parameter",
+              "field",
+              "values",
+              "example",
+              "detail"
+            ]
+          },
+          "combinedMessage": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "fields": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Field ids the form joins into one message."
+              },
+              "maxLength": {
+                "type": "integer",
+                "description": "The limit on the joined message."
+              },
+              "detail": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "fields",
+              "maxLength",
+              "detail"
+            ]
+          },
+          "email": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "to": {
+                "type": "string",
+                "format": "email"
+              },
+              "subject": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string",
+                "description": "A plain-text body that asks the same questions as the form."
+              },
+              "mailto": {
+                "type": "string",
+                "description": "The same email as a mailto: URL."
+              },
+              "detail": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "to",
+              "subject",
+              "body",
+              "mailto",
+              "detail"
+            ]
+          },
+          "responsePromise": {
+            "type": "string",
+            "description": "The promise the contact page makes."
+          },
+          "whatHappensNext": {
+            "type": "array",
+            "description": "The steps /contact shows under “What happens next”, in order.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "step": {
+                  "type": "string"
+                },
+                "detail": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "step",
+                "detail"
+              ]
+            }
+          },
+          "privacy": {
+            "type": "string",
+            "description": "The privacy notice that covers an enquiry.",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "generatedAt",
+          "url",
+          "page",
+          "summary",
+          "preferredRouteForAgents",
+          "routes",
+          "fields",
+          "combinedMessage",
+          "email",
+          "responsePromise",
+          "whatHappensNext",
+          "privacy"
+        ]
+      },
+      "ReleasesResponse": {
+        "type": "object",
+        "description": "The /api/releases.json payload.",
+        "additionalProperties": false,
+        "properties": {
+          "schemaVersion": {
+            "type": "string",
+            "description": "Semver-ish version of this payload shape."
+          },
+          "generatedAt": {
+            "type": "string",
+            "description": "Build time — payloads change only at deploy.",
+            "format": "date-time"
+          },
+          "url": {
+            "type": "string",
+            "description": "Where this document is served.",
+            "format": "uri"
+          },
+          "page": {
+            "type": "string",
+            "description": "The human page these releases are rendered on.",
+            "format": "uri"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "releases": {
+            "type": "array",
+            "description": "Newest first.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "version": {
+                  "type": "string",
+                  "description": "Stable release id, vYYYY.MM.DD.N; also its anchor on /releases."
+                },
+                "date": {
+                  "type": "string",
+                  "description": "ISO date (YYYY-MM-DD) of the release.",
+                  "format": "date"
+                },
+                "summary": {
+                  "type": "string",
+                  "description": "The release notes’ opening paragraph."
+                },
+                "notes": {
+                  "type": "string",
+                  "description": "The full release notes as raw Markdown."
+                },
+                "url": {
+                  "type": "string",
+                  "description": "This release on /releases.",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "version",
+                "date",
+                "summary",
+                "notes",
+                "url"
+              ]
+            }
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "generatedAt",
+          "url",
+          "page",
+          "count",
+          "releases"
+        ]
+      },
+      "Problem": {
+        "type": "object",
+        "description": "RFC 9457 problem details.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Always about:blank: the status code says what happened."
+          },
+          "title": {
+            "type": "string",
+            "description": "Short summary of the error."
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code."
+          },
+          "detail": {
+            "type": "string",
+            "description": "What went wrong and what to do next."
+          },
+          "instance": {
+            "type": "string",
+            "description": "The path that was requested."
+          },
+          "docs": {
+            "type": "string",
+            "format": "uri",
+            "description": "The developer documentation."
+          }
+        },
+        "required": [
+          "type",
+          "title",
+          "status",
+          "detail"
+        ]
+      }
+    }
+  },
+  "x-deprecation-policy": {
+    "url": "https://automancer.uk/api/stability.json",
+    "minimumNoticeDays": 90,
+    "procedure": [
+      "A broken shape is published at a NEW versioned path (/api/v2/<name>.json) and advertised here and in /api/index.json. The existing path keeps serving its current shape; it is not rewritten in place.",
+      "The old path, or the narrower field, is added to `deprecations` below with the date it was announced, the date it stops being served, and the replacement to use.",
+      "The old path is removed only after its `sunset` date has passed, and never sooner than `minimumNoticeDays` after it appeared in this list."
+    ],
+    "deprecations": []
+  },
+  "x-generated-at": "2026-11-21T05:35:38.655Z",
+  "x-markdown-twins": {
+    "description": "Every HTML content page is also available as clean Markdown at its own path plus \".md\" (e.g. /about.md), served as text/markdown with YAML front matter.",
+    "index": "https://automancer.uk/index.md"
+  },
+  "externalDocs": {
+    "description": "Developer & agent documentation — every surface this site offers, with examples.",
+    "url": "https://automancer.uk/developers/"
+  },
+  "x-stability-policy": {
+    "description": "What machines may rely on: the paths and service ids promised stable, what may change without notice, the versioning scheme and the deprecation list.",
+    "url": "https://automancer.uk/api/stability.json"
+  }
+}

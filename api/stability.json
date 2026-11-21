@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-11-21T05:35:38.655Z",
+  "effectiveFrom": "2026-10-20",
+  "url": "https://automancer.uk/api/stability.json",
+  "summary": "What a machine may rely on when it reads this site between deploys, and what may change without notice. Scoped to the public JSON API at automancer.uk.",
+  "versioning": {
+    "scheme": "path-versioned",
+    "currentVersion": 1,
+    "detail": "Every endpoint under /api/ is version 1. A breaking change is published as a new versioned path (/api/v2/...), served alongside the existing one; the existing path is not rewritten in place. `schemaVersion` inside each payload identifies that payload shape, and within one schemaVersion at one path changes are additive only."
+  },
+  "stable": [
+    {
+      "what": "Endpoint paths",
+      "detail": "Every path in `endpointPaths` keeps answering 200 at that path. A path is never silently re-purposed for different data: new data arrives as new fields or as a new endpoint."
+    },
+    {
+      "what": "Operation ids",
+      "detail": "The `operationId` of each endpoint in /openapi.json is the name a function-calling client binds to. It does not change while the endpoint is served."
+    },
+    {
+      "what": "Response field names",
+      "detail": "A field published at a live path keeps its name and its meaning. Renaming it, removing it or re-purposing it for a different fact is a breaking change — see `deprecation`."
+    },
+    {
+      "what": "Published service ids",
+      "detail": "The ids in `stableServiceIds` are what /api/services.json publishes and what a consumer should key on. A service may be renamed or its copy reworded; its id may not change."
+    },
+    {
+      "what": "Published page URLs",
+      "detail": "The page URLs listed in /api/pages.json and the sitemap keep resolving. A page that has to move leaves a redirect to its new URL — on this static host that is a redirect page rather than a server-side 301."
+    },
+    {
+      "what": "Published enum values",
+      "detail": "A value published today (for example `priceUnit` of `project` or `month`) keeps its meaning. New values may be added, so treat an unrecognised value as something new rather than as an error."
+    }
+  ],
+  "endpointPaths": [
+    "/api/index.json",
+    "/api/business.json",
+    "/api/services.json",
+    "/api/enquiry.json",
+    "/api/case-studies.json",
+    "/api/claims.json",
+    "/api/field-notes.json",
+    "/api/pages.json",
+    "/api/stability.json",
+    "/api/releases.json"
+  ],
+  "stableServiceIds": [
+    "automation-opportunity-audit",
+    "workflow-implementation-sprint",
+    "system-agent-build",
+    "ai-ops-partner"
+  ],
+  "additiveChanges": [
+    "New fields on an existing payload. Read the fields you know and ignore the rest; an unknown field is not an error.",
+    "New endpoints, and new services, case studies, field notes or pages.",
+    "New values on an existing enum field.",
+    "Prose: descriptions, summaries, documentation and presentation may be reworded at any deploy, as long as the facts they state do not change.",
+    "Provenance: `generatedAt`, build stamps and revision numbers change on every deploy.",
+    "Array order: collections are published in a stable order today, but that order is not a promise. Sort by `date`, `slug` or `id` when order matters to you."
+  ],
+  "deprecation": {
+    "minimumNoticeDays": 90,
+    "announcedIn": "/api/stability.json `deprecations[]` — this document. It is machine-readable, so an agent can poll it instead of reading prose on a page that may have changed.",
+    "procedure": [
+      "A broken shape is published at a NEW versioned path (/api/v2/<name>.json) and advertised here and in /api/index.json. The existing path keeps serving its current shape; it is not rewritten in place.",
+      "The old path, or the narrower field, is added to `deprecations` below with the date it was announced, the date it stops being served, and the replacement to use.",
+      "The old path is removed only after its `sunset` date has passed, and never sooner than `minimumNoticeDays` after it appeared in this list."
+    ],
+    "httpHeaders": "No Deprecation or Sunset HTTP headers are sent. This document is the announcement channel instead."
+  },
+  "deprecations": [],
+  "notPromised": [
+    "Response headers of any kind, including `Deprecation`, `Sunset` and `Link` — see `deprecation.httpHeaders`.",
+    "Rate limits: none is enforced and none is guaranteed. Payloads change only at deploy, so cache them.",
+    "An uptime SLA. Production is checked after every deploy and every 30 minutes afterwards; that is monitoring, not a promise of availability.",
+    "The `/.well-known/` copies of agent.json and security.txt. They are served (they answered 404 until 22 Oct 2026), but /agent.json and /security.txt are what every surface advertises: rely on those.",
+    "The wording and layout of the HTML pages, as long as the facts they state stay the same."
+  ],
+  "contact": {
+    "email": "waseem@automancer.uk",
+    "url": "https://automancer.uk/contact",
+    "note": "If an endpoint answers something this document says it will not, that is a defect rather than a version change. Email us and say which path."
+  }
+}

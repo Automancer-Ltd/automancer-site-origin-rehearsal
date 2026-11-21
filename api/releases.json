@@ -1,0 +1,408 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-11-21T05:35:38.655Z",
+  "url": "https://automancer.uk/api/releases.json",
+  "page": "https://automancer.uk/releases/",
+  "count": 57,
+  "releases": [
+    {
+      "version": "v2026.11.21.2",
+      "date": "2026-11-21",
+      "summary": "Starting an enquiry is simpler, whether you are exploring a service or browsing on your phone.",
+      "notes": "Starting an enquiry is simpler, whether you are exploring a service or browsing on your phone.\n\n### Improvements\n\n- Service buttons now open the enquiry form with that service selected. The form shows its starting price, and your choice is included in the message sent to Automancer. You can leave the business name blank.\n- On mobile, Contact is visible in the header, with a compact menu for the other pages.\n- Pages can begin displaying without waiting for a separate stylesheet request.",
+      "url": "https://automancer.uk/releases/#v2026.11.21.2"
+    },
+    {
+      "version": "v2026.11.21.1",
+      "date": "2026-11-21",
+      "summary": "Visitors can now find the field notes that interest them more quickly.",
+      "notes": "Visitors can now find the field notes that interest them more quickly.\n\n### Field notes\n\n- Filter field notes by subject and see how many notes each subject has. Each note’s subject links to its subject list.",
+      "url": "https://automancer.uk/releases/#v2026.11.21.1"
+    },
+    {
+      "version": "v2026.11.20.5",
+      "date": "2026-11-20",
+      "summary": "The main pages get to their content sooner, and field notes are easier to explore.",
+      "notes": "The main pages get to their content sooner, and field notes are easier to explore.\n\n### Improvements\n\n- The home and developer pages show their main actions straight away.\n- Pages load the styles they need, helping the first screen appear sooner on a fresh visit.\n- Field notes show their opening paragraph sooner on laptops and suggest three more notes to read.\n\n### Security\n\n- Pages opened from automancer.uk cannot message or inspect the site through that window.\n- XML, SVG and redirect pages apply additional browser security restrictions.",
+      "url": "https://automancer.uk/releases/#v2026.11.20.5"
+    },
+    {
+      "version": "v2026.11.20.4",
+      "date": "2026-11-20",
+      "summary": "Home and services pages now show their published starting prices when shared.",
+      "notes": "Home and services pages now show their published starting prices when shared.\n\n### A smoother experience\n\nThe animated beads, home and developer page headlines, and service price underline move smoothly as you browse.",
+      "url": "https://automancer.uk/releases/#v2026.11.20.4"
+    },
+    {
+      "version": "v2026.11.20.3",
+      "date": "2026-11-20",
+      "summary": "This release makes Automancer’s work easier to explore and share.",
+      "notes": "This release makes Automancer’s work easier to explore and share.\n\n### Explore our work\n\n- Case studies now have an “On this page” list beside the text on larger screens, and a closed contents list on smaller screens. It highlights the section you’re reading.\n- Field notes now have the same contents list, making it easier to find a section and see where you are.\n\n### Share a page\n\n- Each field note and case study now has its own share image, so previews show the page’s headline and details.\n\n### Browsing and contact\n\n- Pages now refuse injected scripts and unsafe HTML, helping protect visitors while they browse.\n- If sending a contact enquiry fails, you can recover the enquiry instead of losing what you wrote.\n- Legacy page redirects now keep the query string as you entered it.",
+      "url": "https://automancer.uk/releases/#v2026.11.20.3"
+    },
+    {
+      "version": "v2026.11.20.2",
+      "date": "2026-11-20",
+      "summary": "Pages can now send data only to this site and its error reporter, with the contact page also able to submit enquiries.",
+      "notes": "Pages can now send data only to this site and its error reporter, with the contact page also able to submit enquiries.",
+      "url": "https://automancer.uk/releases/#v2026.11.20.2"
+    },
+    {
+      "version": "v2026.11.20.1",
+      "date": "2026-11-20",
+      "summary": "The mobile layout is easier to read, with clearer spacing and less crowded text.",
+      "notes": "The mobile layout is easier to read, with clearer spacing and less crowded text.\n\n### Improvements\n\n- On phones, the home page price ladder shows its steps in order, and case-study labels and figures fit more clearly.\n- Text stays on screen across the site at narrow widths and when enlarged to 200%.",
+      "url": "https://automancer.uk/releases/#v2026.11.20.1"
+    },
+    {
+      "version": "v2026.11.19.2",
+      "date": "2026-11-19",
+      "summary": "A new field note helps prospective clients consider whether a workflow sprint or a custom build fits their needs.",
+      "notes": "A new field note helps prospective clients consider whether a workflow sprint or a custom build fits their needs.",
+      "url": "https://automancer.uk/releases/#v2026.11.19.2"
+    },
+    {
+      "version": "v2026.11.12.4",
+      "date": "2026-11-12",
+      "summary": "This release makes the site’s information easier to find and read.",
+      "notes": "This release makes the site’s information easier to find and read.\n\n### Finding information\n\n- Search listings can use the date each page’s wording last changed, rather than the date of every deployment.\n\n### Readability and contact\n\n- Headings and prices remain readable when you enlarge text.\n- The enquiry form starts on the first screen on phones and desktops, and the menu stays reachable without sideways scrolling on phones at 200% text size.",
+      "url": "https://automancer.uk/releases/#v2026.11.12.4"
+    },
+    {
+      "version": "v2026.11.12.3",
+      "date": "2026-11-12",
+      "summary": "The enquiry page and site controls fit better on small screens, while page update dates follow changes to the words visitors see.",
+      "notes": "The enquiry page and site controls fit better on small screens, while page update dates follow changes to the words visitors see.\n\n### Improvements\n\n- The enquiry form is visible sooner on phones and desktop, so visitors can start their enquiry without scrolling as far.\n- The menu stays within reach on phones when text is enlarged to 200%, and contact details and legal links wrap without sideways scrolling.\n- Headings and prices remain readable with enlarged text.\n\n### Page information\n\n- Page update dates reflect when the words on each page last changed, giving visitors and search tools a more useful indication of freshness.",
+      "url": "https://automancer.uk/releases/#v2026.11.12.3"
+    },
+    {
+      "version": "v2026.11.12.2",
+      "date": "2026-11-12",
+      "summary": "Pricing on the services page is clearer and easier to read.",
+      "notes": "Pricing on the services page is clearer and easier to read.\n\n### Services\n\n- Service prices are easier to read when you enlarge text.\n- You can see which services are priced on arrival and follow a link for offer details.",
+      "url": "https://automancer.uk/releases/#v2026.11.12.2"
+    },
+    {
+      "version": "v2026.11.12.1",
+      "date": "2026-11-12",
+      "summary": "The enquiry form and its agent guidance now share one source, so visitors and automated agents get consistent information about how to contact Automancer.",
+      "notes": "The enquiry form and its agent guidance now share one source, so visitors and automated agents get consistent information about how to contact Automancer.",
+      "url": "https://automancer.uk/releases/#v2026.11.12.1"
+    },
+    {
+      "version": "v2026.11.01.3",
+      "date": "2026-11-01",
+      "summary": "A new field note on supplier restore evidence is now available to read.",
+      "notes": "A new field note on supplier restore evidence is now available to read.",
+      "url": "https://automancer.uk/releases/#v2026.11.01.3"
+    },
+    {
+      "version": "v2026.11.01.2",
+      "date": "2026-11-01",
+      "summary": "The site responds more consistently, and the new field note is ready for a future release.",
+      "notes": "The site responds more consistently, and the new field note is ready for a future release.\n\n### Improvements\n\n- Every site response, including error pages and redirects, now includes security headers.\n\n### Coming soon\n\n- A field note on checking a supplier’s restore evidence is in preparation and is not published on the site yet.\n\n### Behind the scenes\n\n- Internal plumbing maintenance; no user-facing behaviour changed. <!-- commits: 2 -->",
+      "url": "https://automancer.uk/releases/#v2026.11.01.2"
+    },
+    {
+      "version": "v2026.10.30.1",
+      "date": "2026-10-30",
+      "summary": "Outlined numerals on the home and services pages now display without stray inner lines.",
+      "notes": "Outlined numerals on the home and services pages now display without stray inner lines.",
+      "url": "https://automancer.uk/releases/#v2026.10.30.1"
+    },
+    {
+      "version": "v2026.10.29.1",
+      "date": "2026-10-29",
+      "summary": "The public website now explains what Automancer does in clearer, simpler language.",
+      "notes": "The public website now explains what Automancer does in clearer, simpler language.",
+      "url": "https://automancer.uk/releases/#v2026.10.29.1"
+    },
+    {
+      "version": "v2026.10.23.5",
+      "date": "2026-10-23",
+      "summary": "The services page now lists what each service includes, so visitors can see its scope alongside the starting price.",
+      "notes": "The services page now lists what each service includes, so visitors can see its scope alongside the starting price.",
+      "url": "https://automancer.uk/releases/#v2026.10.23.5"
+    },
+    {
+      "version": "v2026.10.23.4",
+      "date": "2026-10-23",
+      "summary": "The contact form’s security check now runs from Automancer’s own Cloudflare account. Sending an enquiry works the same way as before.",
+      "notes": "The contact form’s security check now runs from Automancer’s own Cloudflare account. Sending an enquiry works the same way as before.",
+      "url": "https://automancer.uk/releases/#v2026.10.23.4"
+    },
+    {
+      "version": "v2026.10.23.1",
+      "date": "2026-10-23",
+      "summary": "The website’s presentation is more consistent across pages and screen sizes.",
+      "notes": "The website’s presentation is more consistent across pages and screen sizes.\n\n### Improvements\n\n- The Developers page now shows its heading before the action buttons, with more space between section headings and lists.\n- Section labels, story text, and feature rows now align and read more clearly.\n- The home page’s work cards sit in a balanced two-column layout.\n- On phones, the hero clears the navigation and the scroll cue no longer overlaps the action buttons.\n- Text wraps more cleanly, and sections on the same background have more even spacing.",
+      "url": "https://automancer.uk/releases/#v2026.10.23.1"
+    },
+    {
+      "version": "v2026.10.22.8",
+      "date": "2026-10-22",
+      "summary": "When a message is too long, the contact form now explains that the limit covers the message, team size and extra boxes together, so you know what to shorten. The Developers page’s note on the agent manifest is also shorter.",
+      "notes": "When a message is too long, the contact form now explains that the limit covers the message, team size and extra boxes together, so you know what to shorten. The Developers page’s note on the agent manifest is also shorter.",
+      "url": "https://automancer.uk/releases/#v2026.10.22.8"
+    },
+    {
+      "version": "v2026.10.22.6",
+      "date": "2026-10-22",
+      "summary": "The contact form respects reduced-motion preferences when it scrolls into view.",
+      "notes": "The contact form respects reduced-motion preferences when it scrolls into view.",
+      "url": "https://automancer.uk/releases/#v2026.10.22.6"
+    },
+    {
+      "version": "v2026.10.22.5",
+      "date": "2026-10-22",
+      "summary": "The mobile menu stays in view as you move through the page, so you can keep using it without losing your place.",
+      "notes": "The mobile menu stays in view as you move through the page, so you can keep using it without losing your place.",
+      "url": "https://automancer.uk/releases/#v2026.10.22.5"
+    },
+    {
+      "version": "v2026.10.22.1",
+      "date": "2026-10-22",
+      "summary": "When visitors or search tools open a legacy `.html` link, they go straight to its page.",
+      "notes": "When visitors or search tools open a legacy `.html` link, they go straight to its page.",
+      "url": "https://automancer.uk/releases/#v2026.10.22.1"
+    },
+    {
+      "version": "v2026.10.21.9",
+      "date": "2026-10-21",
+      "summary": "Visitors can now read Automancer’s release history on the website, including a page for each release.",
+      "notes": "Visitors can now read Automancer’s release history on the website, including a page for each release.",
+      "url": "https://automancer.uk/releases/#v2026.10.21.9"
+    },
+    {
+      "version": "v2026.10.21.8",
+      "date": "2026-10-21",
+      "summary": "The website is easier for people and services to navigate, with clearer links to its information and more helpful responses when a page or API request cannot be found.",
+      "notes": "The website is easier for people and services to navigate, with clearer links to its information and more helpful responses when a page or API request cannot be found.\n\n### Improvements\n\n- Pages with a Markdown version now provide it to visitors and services that request it.\n- Website pages link to the sitemap, AI guidance, API details, and the homepage’s Markdown version, making this information easier to discover.\n- The homepage now shares the same structured service and pricing details as the Services page, helping services understand what Automancer offers.\n\n### Fixes\n\n- When a page or API request cannot be found, the site provides a helpful error response.\n- The API reference now documents error responses for unavailable pages and server problems.\n- The service directory now includes a link to every listed endpoint.\n- The site’s service information now includes its version and website address.",
+      "url": "https://automancer.uk/releases/#v2026.10.21.8"
+    },
+    {
+      "version": "v2026.10.21.7",
+      "date": "2026-10-21",
+      "summary": "People can now find Automancer’s security contact and service details at the standard web addresses.",
+      "notes": "People can now find Automancer’s security contact and service details at the standard web addresses.",
+      "url": "https://automancer.uk/releases/#v2026.10.21.7"
+    },
+    {
+      "version": "v2026.10.21.2",
+      "date": "2026-10-21",
+      "summary": "You can navigate the mobile menu and hear the contact form confirmation using a keyboard or screen reader.",
+      "notes": "You can navigate the mobile menu and hear the contact form confirmation using a keyboard or screen reader.",
+      "url": "https://automancer.uk/releases/#v2026.10.21.2"
+    },
+    {
+      "version": "v2026.10.21.1",
+      "date": "2026-10-21",
+      "summary": "The site now makes prices and recovery links easier to see, and gives visitors clearer ways to contact Automancer.",
+      "notes": "The site now makes prices and recovery links easier to see, and gives visitors clearer ways to contact Automancer.\n\n### Improvements\n\n- Prices on the services page and recovery links on the 404 page remain visible when scripts are unavailable.\n- The mobile menu closes when a visitor widens the screen, and focus returns to the menu button.\n\n### Contact\n\n- If the contact form cannot load its security check, visitors see the email option. The form also starts disabled until it is ready, so enquiries are not silently lost when scripts are unavailable.\n- Visitors can retry a failed enquiry without reusing the previous security check.\n- Case study summaries display as plain text.",
+      "url": "https://automancer.uk/releases/#v2026.10.21.1"
+    },
+    {
+      "version": "v2026.10.20.1",
+      "date": "2026-10-20",
+      "summary": "The site now publishes, as data, what a machine may rely on — and, just as plainly, what it may not.",
+      "notes": "The site now publishes, as data, what a machine may rely on — and, just as plainly, what it may not.\n\n### For agents and developers\n\n- New **`/api/stability.json`**: the endpoint paths, operation ids, service ids and field names that are promised to stay stable, what may change without notice, how a breaking change is published, and how much notice a removal gets.\n- It also says what the site does **not** promise: no `Deprecation` or `Sunset` response headers on a static host, no rate limit, no uptime SLA.\n\n### Documentation\n\n- `/developers` links the new policy, and its endpoint count now comes from the API registry instead of being typed by hand.\n- `llms.txt`, `robots.txt`, `/api/index.json`, `/openapi.json` and `/agent.json` all advertise it, and the production checker verifies the served document every deploy and every 30 minutes.",
+      "url": "https://automancer.uk/releases/#v2026.10.20.1"
+    },
+    {
+      "version": "v2026.10.14.1",
+      "date": "2026-10-14",
+      "summary": "A clearer, more consistent picture of Automancer’s services and pricing across the website and its published information.",
+      "notes": "A clearer, more consistent picture of Automancer’s services and pricing across the website and its published information.\n\n### Services\n\n- The service names on the home page, services page, and published service information now match.\n\n### Pricing\n\n- Published starting prices stay consistent across the website and service information.",
+      "url": "https://automancer.uk/releases/#v2026.10.14.1"
+    },
+    {
+      "version": "v2026.10.13.1",
+      "date": "2026-10-13",
+      "summary": "If the contact form cannot load its security check, visitors can use the email option to get in touch.",
+      "notes": "If the contact form cannot load its security check, visitors can use the email option to get in touch.",
+      "url": "https://automancer.uk/releases/#v2026.10.13.1"
+    },
+    {
+      "version": "v2026.10.05.2",
+      "date": "2026-10-05",
+      "summary": "A new guide helps businesses explore which routine tasks may be suitable for automation on a budget under £1,000.",
+      "notes": "A new guide helps businesses explore which routine tasks may be suitable for automation on a budget under £1,000.",
+      "url": "https://automancer.uk/releases/#v2026.10.05.2"
+    },
+    {
+      "version": "v2026.10.01.1",
+      "date": "2026-10-01",
+      "summary": "This release makes key website information easier to read and helps visitors get a response if an enquiry connection stalls. It also adds a new article about why business systems can disagree.",
+      "notes": "This release makes key website information easier to read and helps visitors get a response if an enquiry connection stalls. It also adds a new article about why business systems can disagree.\n\n### New article\n\n- Read about why business systems can disagree and the problems that can cause.\n\n### Improvements\n\n- The footer tagline and step labels are easier to read against their backgrounds.\n- Field note pages now provide a word count that matches the article.\n\n### Fixes\n\n- If an enquiry connection stalls, the form now stops waiting and shows a direct email option.",
+      "url": "https://automancer.uk/releases/#v2026.10.01.1"
+    },
+    {
+      "version": "v2026.09.21.1",
+      "date": "2026-09-21",
+      "summary": "A new field note explains how identity matching helps reduce duplicate data and orphan records.",
+      "notes": "A new field note explains how identity matching helps reduce duplicate data and orphan records.",
+      "url": "https://automancer.uk/releases/#v2026.09.21.1"
+    },
+    {
+      "version": "v2026.09.15.1",
+      "date": "2026-09-15",
+      "summary": "A new field note explains what governed AI means and why it matters.",
+      "notes": "A new field note explains what governed AI means and why it matters.",
+      "url": "https://automancer.uk/releases/#v2026.09.15.1"
+    },
+    {
+      "version": "v2026.09.10.1",
+      "date": "2026-09-10",
+      "summary": "This release makes Automancer’s public information clearer and more transparent.",
+      "notes": "This release makes Automancer’s public information clearer and more transparent.\n\n### Clarity and transparency\n\n- The site now explains that agents monitor software spend and prepare invoices, while Waseem approves and issues them. Bookkeeping remains manual.\n- A new field note explains how AI agents make decisions.",
+      "url": "https://automancer.uk/releases/#v2026.09.10.1"
+    },
+    {
+      "version": "v2026.09.05.1",
+      "date": "2026-09-05",
+      "summary": "This release includes a security improvement that supports a safe, dependable experience.",
+      "notes": "This release includes a security improvement that supports a safe, dependable experience.",
+      "url": "https://automancer.uk/releases/#v2026.09.05.1"
+    },
+    {
+      "version": "v2026.08.31.1",
+      "date": "2026-08-31",
+      "summary": "Agents reading the site now see the same one-week meeting promise that people already see: we promise a meeting within one week of first contact.",
+      "notes": "Agents reading the site now see the same one-week meeting promise that people already see: we promise a meeting within one week of first contact.",
+      "url": "https://automancer.uk/releases/#v2026.08.31.1"
+    },
+    {
+      "version": "v2026.08.30.1",
+      "date": "2026-08-30",
+      "summary": "This release makes the site clearer and easier to use across key visitor journeys.",
+      "notes": "This release makes the site clearer and easier to use across key visitor journeys.\n\n### Improvements\n\n- Navigation links and controls are easier to tap on mobile devices.\n- The site tagline is available to visitors using screen readers.\n- The terms page displays its publication date.\n\n### Fixes\n\n- Text on the page-not-found screen is easier to read.\n- Contact form errors bring the relevant field into view, so you can see what needs attention.",
+      "url": "https://automancer.uk/releases/#v2026.08.30.1"
+    },
+    {
+      "version": "v2026.08.29.1",
+      "date": "2026-08-29",
+      "summary": "A new field note helps self-storage teams know what to check before choosing software.",
+      "notes": "A new field note helps self-storage teams know what to check before choosing software.",
+      "url": "https://automancer.uk/releases/#v2026.08.29.1"
+    },
+    {
+      "version": "v2026.08.23.2",
+      "date": "2026-08-23",
+      "summary": "Our privacy information now gives a clearer picture of how the website’s security check uses browser storage.",
+      "notes": "Our privacy information now gives a clearer picture of how the website’s security check uses browser storage.\n\n### Privacy\n\n- The privacy notice now describes what the contact-page security check actually stores. We measured it: it sets no cookie, and instead saves one small value in your browser.\n- It states that this storage sits under the security provider’s domain rather than Automancer’s, and why it needs no consent prompt.",
+      "url": "https://automancer.uk/releases/#v2026.08.23.2"
+    },
+    {
+      "version": "v2026.08.23.1",
+      "date": "2026-08-23",
+      "summary": "This release makes privacy choices simpler and the site’s data handling easier to understand.",
+      "notes": "This release makes privacy choices simpler and the site’s data handling easier to understand.\n\n### Privacy and data handling\n\n- The site no longer saves campaign details in your browser or sends them with contact enquiries.\n- The privacy notice now explains the limited technical information used when a page error occurs, including that personal data settings are turned off.",
+      "url": "https://automancer.uk/releases/#v2026.08.23.1"
+    },
+    {
+      "version": "v2026.08.22.11",
+      "date": "2026-08-22",
+      "summary": "Contact form errors are now clearer and more helpful for visitors.",
+      "notes": "Contact form errors are now clearer and more helpful for visitors.\n\n### Improvements\n\n- Visitors now see plain-English guidance when a contact form submission cannot be completed.\n- Unexpected submission errors include a direct email option, so visitors can still get in touch.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.11"
+    },
+    {
+      "version": "v2026.08.22.10",
+      "date": "2026-08-22",
+      "summary": "The contact form now gives clearer explanations when a message cannot be sent, including when requests are temporarily limited.",
+      "notes": "The contact form now gives clearer explanations when a message cannot be sent, including when requests are temporarily limited.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.10"
+    },
+    {
+      "version": "v2026.08.22.9",
+      "date": "2026-08-22",
+      "summary": "Published updates now receive a more complete release check, so empty entries are caught before they appear on the website.",
+      "notes": "Published updates now receive a more complete release check, so empty entries are caught before they appear on the website.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.9"
+    },
+    {
+      "version": "v2026.08.22.8",
+      "date": "2026-08-22",
+      "summary": "Service links keep the same published identity when service names change, so existing references continue to work.",
+      "notes": "Service links keep the same published identity when service names change, so existing references continue to work.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.8"
+    },
+    {
+      "version": "v2026.08.22.7",
+      "date": "2026-08-22",
+      "summary": "If the security check fails twice, the contact form offers an email fallback so you can still send your enquiry.",
+      "notes": "If the security check fails twice, the contact form offers an email fallback so you can still send your enquiry.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.7"
+    },
+    {
+      "version": "v2026.08.22.6",
+      "date": "2026-08-22",
+      "summary": "This release makes Automancer’s public information easier for developers and AI tools to discover, understand, and use through clearer guidance and a dedicated developer area.",
+      "notes": "This release makes Automancer’s public information easier for developers and AI tools to discover, understand, and use through clearer guidance and a dedicated developer area.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.6"
+    },
+    {
+      "version": "v2026.08.22.5",
+      "date": "2026-08-22",
+      "summary": "The website now presents its services and work more clearly, with improved readability, stronger visual hierarchy, and a smoother experience across desktop and mobile.",
+      "notes": "The website now presents its services and work more clearly, with improved readability, stronger visual hierarchy, and a smoother experience across desktop and mobile.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.5"
+    },
+    {
+      "version": "v2026.08.22.4",
+      "date": "2026-08-22",
+      "summary": "The website’s public information for automated services and security enquiries is now available at reliable addresses.",
+      "notes": "The website’s public information for automated services and security enquiries is now available at reliable addresses.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.4"
+    },
+    {
+      "version": "v2026.08.22.3",
+      "date": "2026-08-22",
+      "summary": "This release improves confidence that the public website remains available and secure after updates and between visits.",
+      "notes": "This release improves confidence that the public website remains available and secure after updates and between visits.\n\n### Reliability\n\n- The site is now checked after each update and on a regular schedule.\n- These checks help us spot unavailable pages and secure-connection issues sooner.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.3"
+    },
+    {
+      "version": "v2026.08.22.2",
+      "date": "2026-08-22",
+      "summary": "Automancer’s public website now makes its service information and security contact details available to the tools and services that look for them.",
+      "notes": "Automancer’s public website now makes its service information and security contact details available to the tools and services that look for them.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.2"
+    },
+    {
+      "version": "v2026.08.22.1",
+      "date": "2026-08-22",
+      "summary": "This release makes the site easier to explore, recover from errors, and access in different reading tools.",
+      "notes": "This release makes the site easier to explore, recover from errors, and access in different reading tools.\n\n### Improvements\n\n- Site information is now available in a consistent text format, making it easier to read and reuse across different tools.\n\n### Fixes\n\n- The page-not-found screen now helps visitors get back on track. It links to every main section, recent field notes, case studies, and contact options.",
+      "url": "https://automancer.uk/releases/#v2026.08.22.1"
+    },
+    {
+      "version": "v2026.08.21.2",
+      "date": "2026-08-21",
+      "summary": "Internal tooling only — nothing on the website changes for visitors.",
+      "notes": "Internal tooling only — nothing on the website changes for visitors.\n\n- The script that regenerates the social-sharing preview image now refuses bad\n  arguments before it does anything, so it can no longer overwrite the live\n  image by mistake, and it always shuts the browser down afterwards even when a\n  render fails. It had also stopped being runnable at all, and it pointed at a\n  Chromium version that is no longer installed; both are fixed.\n- Verified end to end: the script renders a real 1200x630 PNG, and the browser\n  it starts is gone afterwards.",
+      "url": "https://automancer.uk/releases/#v2026.08.21.2"
+    },
+    {
+      "version": "v2026.08.21.1",
+      "date": "2026-08-21",
+      "summary": "This release makes the website clearer to use, easier to discover, and more transparent about the business behind it.",
+      "notes": "This release makes the website clearer to use, easier to discover, and more transparent about the business behind it.\n\n### New content\n\n- Added a practical guide to UK legal requirements for new business websites.\n\n### Improvements\n\n- Improved page headings and navigation for visitors using assistive technology.\n- Search results now show clearer page descriptions and titles.\n- The page shown for broken links now has a clear heading.\n- Logos in the navigation and footer are identified more clearly for assistive technology.\n\n### Compliance updates\n\n- The privacy notice now explains how to complain directly to Automancer and confirms a 30-day acknowledgement.\n- The footer now includes the company’s place of registration.",
+      "url": "https://automancer.uk/releases/#v2026.08.21.1"
+    },
+    {
+      "version": "v2026.08.18.1",
+      "date": "2026-08-18",
+      "summary": "This release gives prospective clients a clearer, more grounded view of how we approach business website content.",
+      "notes": "This release gives prospective clients a clearer, more grounded view of how we approach business website content.\n\n### Improvements\n\n- Trading-disclosure guidance now focuses on practical website content and clearly states that it is not legal advice.\n- Our case study and website cost guidance now use precise wording without broad compliance claims or unsupported delivery claims.",
+      "url": "https://automancer.uk/releases/#v2026.08.18.1"
+    },
+    {
+      "version": "v2026.08.17.1",
+      "date": "2026-08-17",
+      "summary": "This release adds a new field note on building trust through credit-hire website compliance.",
+      "notes": "This release adds a new field note on building trust through credit-hire website compliance.",
+      "url": "https://automancer.uk/releases/#v2026.08.17.1"
+    }
+  ]
+}
